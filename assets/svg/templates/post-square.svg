@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080" role="img" aria-labelledby="title desc">
+  <title id="title">Шаблон квадратной публикации MOKO AI</title>
+  <desc id="desc">Редактируемый SVG-шаблон для одной ясной мысли, факта или инструкции.</desc>
+  <metadata>Native SVG master; version 1.0.0; created 2026-10-03.</metadata>
+  <rect width="1080" height="1080" fill="#050505"/>
+  <rect x="64" y="64" width="952" height="952" rx="32" fill="#0a0a0a" stroke="#34383c" stroke-width="2"/>
+  <g transform="translate(88 88) scale(0.3)">
+    <path d="M160 4.27406L271 154.274L176 192.274L160 4.27406Z" fill="#b93636"/>
+    <path d="M94.8938 0L127.894 44L101.894 82L94.8938 0Z" fill="#b93636"/>
+    <path d="M160 4.27406L176 192.274L53 163.274L160 4.27406Z" fill="#d64545"/>
+    <path d="M93.5 2.27405L58 147.274L0 132.274L93.5 2.27405Z" fill="#d64545"/>
+    <path d="M95 0.274048L102 81.774L58 147.274L0 132.274L95 0.274048Z" fill="#d64545"/></g>
+  <g transform="translate(184 88)">
+    <rect width="88" height="44" rx="14" fill="#050505" stroke="#d64545" stroke-width="2"/>
+    <text x="44" y="29" text-anchor="middle" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">AI</text>
+  </g>
+  <text x="88" y="240" fill="#d64545" font-family="monospace" font-size="22" letter-spacing="3">MOKO AI · [РУБРИКА]</text>
+  <text x="88" y="354" fill="#ffffff" font-family="Jost, Arial, sans-serif" font-size="72" font-weight="600">
+    <tspan x="88" dy="0">Одна ясная</tspan><tspan x="88" dy="82">мысль на карточку</tspan>
+  </text>
+  <path d="M88 578H222" stroke="#d64545" stroke-width="10"/>
+  <text x="88" y="674" fill="#9ca3af" font-family="Inter, Arial, sans-serif" font-size="30">
+    <tspan x="88" dy="0">Короткое пояснение: факты, ограничения</tspan><tspan x="88" dy="46">и следующий полезный шаг.</tspan>
+  </text>
+  <g transform="translate(88 892)">
+    <circle cx="10" cy="10" r="10" fill="#4caf7d"/>
+    <text x="34" y="18" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">ПРОВЕРЕНО</text>
+  </g>
+  <text x="992" y="940" text-anchor="end" fill="#6b7177" font-family="monospace" font-size="20">moko.by</text>
+</svg>

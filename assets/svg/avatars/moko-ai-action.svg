@@ -1,0 +1,32 @@
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024" role="img" aria-labelledby="title desc">
+    <title id="title">Аватар MOKO AI — выполняет действие</title>
+    <desc id="desc">Аватар MOKO AI: неизменённый знак MOKO, контур нейронной сети и шильдик AI, синий статус выполнения.</desc>
+    <metadata>Brandbook: https://moko.by/brandbook/; native SVG master; version 1.0.0; created 2026-10-03.</metadata>
+    <rect width="1024" height="1024" rx="224" fill="#050505"/>
+    <circle cx="512" cy="512" r="380" fill="#0a0a0a" stroke="#34383c" stroke-width="4"/>
+    <g fill="none" stroke="#34383c" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M196 512H280"/><path d="M744 512H828"/>
+      <path d="M270 324L326 380"/><path d="M698 380L754 324"/>
+      <path d="M270 700L326 644"/><path d="M698 644L754 700"/>
+    </g>
+    <g fill="#d64545">
+      <circle cx="184" cy="512" r="22"/><circle cx="840" cy="512" r="22"/>
+      <circle cx="254" cy="308" r="22"/><circle cx="770" cy="308" r="22"/>
+      <circle cx="254" cy="716" r="22"/><circle cx="770" cy="716" r="22"/>
+    </g>
+    <g transform="translate(268 337) scale(1.8)">
+
+  <path d="M160 4.27406L271 154.274L176 192.274L160 4.27406Z" fill="#b93636"/>
+  <path d="M94.8938 0L127.894 44L101.894 82L94.8938 0Z" fill="#b93636"/>
+  <path d="M160 4.27406L176 192.274L53 163.274L160 4.27406Z" fill="#d64545"/>
+  <path d="M93.5 2.27405L58 147.274L0 132.274L93.5 2.27405Z" fill="#d64545"/>
+  <path d="M95 0.274048L102 81.774L58 147.274L0 132.274L95 0.274048Z" fill="#d64545"/>
+    </g>
+    <g transform="translate(444 718)">
+      <rect x="2" y="2" width="132" height="64" rx="20" fill="#050505" stroke="#d64545" stroke-width="4"/>
+      <path d="M34 48L47.5 20H56.5L70 48H61.5L59 42H45L42.5 48H34ZM47.8 35H56.2L52 25L47.8 35Z" fill="#ffffff"/>
+      <path d="M79 20H88V48H79V20Z" fill="#ffffff"/>
+    </g>
+<circle cx="786" cy="786" r="66" fill="#050505"/>
+<circle cx="786" cy="786" r="48" fill="#4a7fb5"/>
+  </svg>

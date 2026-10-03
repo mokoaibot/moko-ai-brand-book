@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-labelledby="title desc">
+  <title id="title">Шаблон карточки ответа MOKO AI</title>
+  <desc id="desc">Редактируемый SVG-шаблон для краткого ответа или объяснения.</desc>
+  <metadata>Native SVG master; version 1.0.0; created 2026-10-03.</metadata>
+  <rect width="1200" height="630" fill="#050505"/>
+  <rect x="40" y="40" width="1120" height="550" rx="30" fill="#0a0a0a" stroke="#34383c" stroke-width="2"/>
+  <path d="M72 40V590" stroke="#d64545" stroke-width="8"/>
+  <g transform="translate(104 84) scale(0.24)">
+    <path d="M160 4.27406L271 154.274L176 192.274L160 4.27406Z" fill="#b93636"/>
+    <path d="M94.8938 0L127.894 44L101.894 82L94.8938 0Z" fill="#b93636"/>
+    <path d="M160 4.27406L176 192.274L53 163.274L160 4.27406Z" fill="#d64545"/>
+    <path d="M93.5 2.27405L58 147.274L0 132.274L93.5 2.27405Z" fill="#d64545"/>
+    <path d="M95 0.274048L102 81.774L58 147.274L0 132.274L95 0.274048Z" fill="#d64545"/></g>
+  <text x="200" y="127" fill="#ffffff" font-family="Jost, Arial, sans-serif" font-size="34" font-weight="600">MOKO AI</text>
+  <text x="104" y="226" fill="#d64545" font-family="monospace" font-size="18" letter-spacing="2">КОРОТКИЙ ОТВЕТ</text>
+  <text x="104" y="308" fill="#ffffff" font-family="Jost, Arial, sans-serif" font-size="48" font-weight="600">
+    <tspan x="104" dy="0">Сначала вывод.</tspan><tspan x="104" dy="62">Затем — основание и следующий шаг.</tspan>
+  </text>
+  <text x="104" y="485" fill="#9ca3af" font-family="Inter, Arial, sans-serif" font-size="24">Без выдуманных фактов, скрытых допущений и лишней терминологии.</text>
+  <text x="1100" y="542" text-anchor="end" fill="#6b7177" font-family="monospace" font-size="18">moko.by · AI</text>
+</svg>

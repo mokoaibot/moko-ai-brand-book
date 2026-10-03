@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="title desc">
+  <title id="title">Компактный аватар MOKO AI</title>
+  <desc id="desc">Упрощённая версия для отображения от 24 до 63 пикселей: фон и знак без мелких деталей.</desc>
+  <rect width="64" height="64" rx="14" fill="#050505"/>
+  <g transform="translate(9 15.6) scale(0.17)">
+
+    <path d="M160 4.27406L271 154.274L176 192.274L160 4.27406Z" fill="#b93636"/>
+    <path d="M94.8938 0L127.894 44L101.894 82L94.8938 0Z" fill="#b93636"/>
+    <path d="M160 4.27406L176 192.274L53 163.274L160 4.27406Z" fill="#d64545"/>
+    <path d="M93.5 2.27405L58 147.274L0 132.274L93.5 2.27405Z" fill="#d64545"/>
+    <path d="M95 0.274048L102 81.774L58 147.274L0 132.274L95 0.274048Z" fill="#d64545"/>
+  </g>
+</svg>

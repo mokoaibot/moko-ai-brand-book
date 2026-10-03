@@ -1,0 +1,41 @@
+{
+  "$schema": "https://www.designtokens.org/tr/drafts/format/",
+  "meta": {
+    "name": "MOKO AI",
+    "version": "1.0.0",
+    "updated": "2026-10-03",
+    "source": "https://moko.by/brandbook/"
+  },
+  "color": {
+    "brand": {
+      "red": { "$type": "color", "$value": "#d64545", "$description": "MOKO Red; светлые грани и основной акцент" },
+      "red-dark": { "$type": "color", "$value": "#b93636", "$description": "Red Dark; тёмные грани" },
+      "black": { "$type": "color", "$value": "#050505", "$description": "Base Black" },
+      "panel": { "$type": "color", "$value": "#0a0a0a", "$description": "Тёмная панель" },
+      "grey-dim": { "$type": "color", "$value": "#6b7177", "$description": "Технические подписи" },
+      "grey": { "$type": "color", "$value": "#9ca3af", "$description": "Вторичный текст" },
+      "white": { "$type": "color", "$value": "#ffffff", "$description": "Основной текст на тёмном" }
+    },
+    "ai": {
+      "network": { "$type": "color", "$value": "#34383c", "$description": "Тихий контур сети" },
+      "light-bg": { "$type": "color", "$value": "#f3f3f1", "$description": "Светлый фон аватара" },
+      "light-line": { "$type": "color", "$value": "#b8bdc2", "$description": "Контур на светлом фоне" },
+      "ready": { "$type": "color", "$value": "#4caf7d", "$description": "Доступен или проверено" },
+      "attention": { "$type": "color", "$value": "#e0a33e", "$description": "Думает или требует внимания" },
+      "action": { "$type": "color", "$value": "#4a7fb5", "$description": "Выполняет подтверждённое действие" }
+    }
+  },
+  "avatar": {
+    "canvas": { "$type": "dimension", "$value": { "value": 1024, "unit": "px" } },
+    "corner-radius": { "$type": "dimension", "$value": { "value": 224, "unit": "px" } },
+    "safe-circle-diameter": { "$type": "dimension", "$value": { "value": 760, "unit": "px" } },
+    "full-min-size": { "$type": "dimension", "$value": { "value": 64, "unit": "px" } },
+    "small-min-size": { "$type": "dimension", "$value": { "value": 24, "unit": "px" } }
+  },
+  "type": {
+    "display": { "$type": "fontFamily", "$value": "Century Gothic" },
+    "heading": { "$type": "fontFamily", "$value": "Jost" },
+    "body": { "$type": "fontFamily", "$value": "Inter" },
+    "technical": { "$type": "fontFamily", "$value": "monospace" }
+  }
+}

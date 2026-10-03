@@ -1,0 +1,101 @@
+{
+  "name": "moko-ai-brandbook",
+  "version": "1.0.0",
+  "updated": "2026-10-03",
+  "sourceOfTruth": "SVG",
+  "brandbook": "BRANDBOOK.md",
+  "assets": [
+    {
+      "id": "moko-logo-color",
+      "path": "assets/svg/moko/logo-mark-color.svg",
+      "kind": "source-mark",
+      "usage": "Official MOKO color mark; geometry and colors are locked"
+    },
+    {
+      "id": "moko-logo-white",
+      "path": "assets/svg/moko/logo-mark-white.svg",
+      "kind": "source-mark",
+      "usage": "Monochrome white mark"
+    },
+    {
+      "id": "moko-ai-badge",
+      "path": "assets/svg/components/ai-badge.svg",
+      "kind": "component",
+      "usage": "Font-independent AI label"
+    },
+    {
+      "id": "moko-ai-primary-dark",
+      "path": "assets/svg/avatars/moko-ai-primary-dark.svg",
+      "kind": "avatar",
+      "theme": "dark",
+      "minDisplayPx": 64,
+      "primary": true
+    },
+    {
+      "id": "moko-ai-primary-light",
+      "path": "assets/svg/avatars/moko-ai-primary-light.svg",
+      "kind": "avatar",
+      "theme": "light",
+      "minDisplayPx": 64
+    },
+    {
+      "id": "moko-ai-mono",
+      "path": "assets/svg/avatars/moko-ai-mono.svg",
+      "kind": "avatar",
+      "theme": "mono",
+      "minDisplayPx": 64
+    },
+    {
+      "id": "moko-ai-small",
+      "path": "assets/svg/avatars/moko-ai-small.svg",
+      "kind": "avatar",
+      "theme": "dark",
+      "minDisplayPx": 24,
+      "maxDisplayPx": 63
+    },
+    {
+      "id": "moko-ai-transparent",
+      "path": "assets/svg/avatars/moko-ai-transparent.svg",
+      "kind": "lockup",
+      "theme": "transparent"
+    },
+    {
+      "id": "moko-ai-online",
+      "path": "assets/svg/avatars/moko-ai-online.svg",
+      "kind": "avatar-state",
+      "state": "available",
+      "statusColor": "#4caf7d"
+    },
+    {
+      "id": "moko-ai-thinking",
+      "path": "assets/svg/avatars/moko-ai-thinking.svg",
+      "kind": "avatar-state",
+      "state": "processing",
+      "statusColor": "#e0a33e"
+    },
+    {
+      "id": "moko-ai-action",
+      "path": "assets/svg/avatars/moko-ai-action.svg",
+      "kind": "avatar-state",
+      "state": "acting",
+      "statusColor": "#4a7fb5"
+    },
+    {
+      "id": "avatar-family-preview",
+      "path": "assets/svg/previews/avatar-family.svg",
+      "kind": "preview"
+    },
+    {
+      "id": "post-square",
+      "path": "assets/svg/templates/post-square.svg",
+      "kind": "template",
+      "canvas": "1080x1080"
+    },
+    {
+      "id": "answer-card",
+      "path": "assets/svg/templates/answer-card.svg",
+      "kind": "template",
+      "canvas": "1200x630"
+    }
+  ]
+}

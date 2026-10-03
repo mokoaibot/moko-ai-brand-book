@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 320" width="560" height="320" role="img" aria-labelledby="title desc">
+  <title id="title">Прозрачный знак MOKO AI</title>
+  <desc id="desc">Знак MOKO с шильдиком AI без фоновой плашки.</desc>
+  <g transform="translate(44 36) scale(1.28)">
+
+    <path d="M160 4.27406L271 154.274L176 192.274L160 4.27406Z" fill="#b93636"/>
+    <path d="M94.8938 0L127.894 44L101.894 82L94.8938 0Z" fill="#b93636"/>
+    <path d="M160 4.27406L176 192.274L53 163.274L160 4.27406Z" fill="#d64545"/>
+    <path d="M93.5 2.27405L58 147.274L0 132.274L93.5 2.27405Z" fill="#d64545"/>
+    <path d="M95 0.274048L102 81.774L58 147.274L0 132.274L95 0.274048Z" fill="#d64545"/>
+  </g>
+  <g transform="translate(385 126)">
+    <rect x="2" y="2" width="132" height="64" rx="20" fill="#050505" stroke="#d64545" stroke-width="4"/>
+    <path d="M34 48L47.5 20H56.5L70 48H61.5L59 42H45L42.5 48H34ZM47.8 35H56.2L52 25L47.8 35Z" fill="#ffffff"/>
+    <path d="M79 20H88V48H79V20Z" fill="#ffffff"/>
+  </g>
+</svg>

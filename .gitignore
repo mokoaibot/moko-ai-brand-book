@@ -1,0 +1,23 @@
+# Operating systems
+.DS_Store
+Thumbs.db
+
+# Editors
+.idea/
+.vscode/
+*.swp
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Derived raster exports: keep SVG as source of truth
+exports/
+*.png
+*.webp
+*.jpg
+*.jpeg
+
+# Local scratch
+.tmp/

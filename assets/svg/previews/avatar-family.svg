@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 780" width="1280" height="780" role="img" aria-labelledby="title desc">
+  <title id="title">Семейство аватаров MOKO AI</title>
+  <desc id="desc">Основные тёмная, светлая и монохромная версии, а также статусы доступен, думает и выполняет действие.</desc>
+  <rect width="1280" height="780" fill="#050505"/>
+  <path d="M64 70H112" stroke="#d64545" stroke-width="8"/>
+  <text x="64" y="122" fill="#ffffff" font-family="Jost, Inter, Arial, sans-serif" font-size="44" font-weight="600">MOKO AI · АВАТАРЫ</text>
+  <text x="64" y="158" fill="#9ca3af" font-family="Inter, Arial, sans-serif" font-size="20">Нативный SVG · знак MOKO не изменён · версия 1.0.0</text>
+
+    <g>
+      <rect x="64" y="206" width="256" height="256" rx="56" fill="#050505"/>
+      <circle cx="192" cy="334" r="95" fill="#0a0a0a" stroke="#34383c"/>
+      <g fill="none" stroke="#34383c" stroke-width="3" stroke-linecap="round">
+        <path d="M113 334H134"/><path d="M250 334H271"/>
+        <path d="M131 287L145 301"/><path d="M239 301L253 287"/>
+      </g>
+      <g fill="#d64545"><circle cx="110" cy="334" r="6"/><circle cx="274" cy="334" r="6"/><circle cx="127" cy="283" r="6"/><circle cx="257" cy="283" r="6"/></g>
+      <g transform="translate(131 292) scale(0.45)">
+    <path d="M160 4.27406L271 154.274L176 192.274L160 4.27406Z" fill="#b93636"/>
+    <path d="M94.8938 0L127.894 44L101.894 82L94.8938 0Z" fill="#b93636"/>
+    <path d="M160 4.27406L176 192.274L53 163.274L160 4.27406Z" fill="#d64545"/>
+    <path d="M93.5 2.27405L58 147.274L0 132.274L93.5 2.27405Z" fill="#d64545"/>
+    <path d="M95 0.274048L102 81.774L58 147.274L0 132.274L95 0.274048Z" fill="#d64545"/></g>
+      <g transform="translate(175 385) scale(0.25)">
+        <rect x="2" y="2" width="132" height="64" rx="20" fill="#050505" stroke="#d64545" stroke-width="4"/>
+        <path d="M34 48L47.5 20H56.5L70 48H61.5L59 42H45L42.5 48H34ZM47.8 35H56.2L52 25L47.8 35Z" fill="#ffffff"/><path d="M79 20H88V48H79V20Z" fill="#ffffff"/>
+      </g>
+    </g>
+
+    <g>
+      <rect x="374" y="206" width="256" height="256" rx="56" fill="#f3f3f1"/>
+      <circle cx="502" cy="334" r="95" fill="#ffffff" stroke="#b8bdc2"/>
+      <g fill="none" stroke="#b8bdc2" stroke-width="3" stroke-linecap="round">
+        <path d="M423 334H444"/><path d="M560 334H581"/>
+        <path d="M441 287L455 301"/><path d="M549 301L563 287"/>
+      </g>
+      <g fill="#d64545"><circle cx="420" cy="334" r="6"/><circle cx="584" cy="334" r="6"/><circle cx="437" cy="283" r="6"/><circle cx="567" cy="283" r="6"/></g>
+      <g transform="translate(441 292) scale(0.45)">
+    <path d="M160 4.27406L271 154.274L176 192.274L160 4.27406Z" fill="#b93636"/>
+    <path d="M94.8938 0L127.894 44L101.894 82L94.8938 0Z" fill="#b93636"/>
+    <path d="M160 4.27406L176 192.274L53 163.274L160 4.27406Z" fill="#d64545"/>
+    <path d="M93.5 2.27405L58 147.274L0 132.274L93.5 2.27405Z" fill="#d64545"/>
+    <path d="M95 0.274048L102 81.774L58 147.274L0 132.274L95 0.274048Z" fill="#d64545"/></g>
+      <g transform="translate(485 385) scale(0.25)">
+        <rect x="2" y="2" width="132" height="64" rx="20" fill="#ffffff" stroke="#d64545" stroke-width="4"/>
+        <path d="M34 48L47.5 20H56.5L70 48H61.5L59 42H45L42.5 48H34ZM47.8 35H56.2L52 25L47.8 35Z" fill="#050505"/><path d="M79 20H88V48H79V20Z" fill="#050505"/>
+      </g>
+    </g>
+
+    <g>
+      <rect x="684" y="206" width="256" height="256" rx="56" fill="#050505"/>
+      <circle cx="812" cy="334" r="95" fill="#0a0a0a" stroke="#6b7177"/>
+      <g fill="none" stroke="#6b7177" stroke-width="3" stroke-linecap="round">
+        <path d="M733 334H754"/><path d="M870 334H891"/>
+        <path d="M751 287L765 301"/><path d="M859 301L873 287"/>
+      </g>
+      <g fill="#d64545"><circle cx="730" cy="334" r="6"/><circle cx="894" cy="334" r="6"/><circle cx="747" cy="283" r="6"/><circle cx="877" cy="283" r="6"/></g>
+      <g transform="translate(751 292) scale(0.45)">
+    <path d="M160 4.27406L271 154.274L176 192.274L160 4.27406Z" fill="#ffffff"/>
+    <path d="M94.8938 0L127.894 44L101.894 82L94.8938 0Z" fill="#ffffff"/>
+    <path d="M160 4.27406L176 192.274L53 163.274L160 4.27406Z" fill="#ffffff"/>
+    <path d="M93.5 2.27405L58 147.274L0 132.274L93.5 2.27405Z" fill="#ffffff"/>
+    <path d="M95 0.274048L102 81.774L58 147.274L0 132.274L95 0.274048Z" fill="#ffffff"/></g>
+      <g transform="translate(795 385) scale(0.25)">
+        <rect x="2" y="2" width="132" height="64" rx="20" fill="#050505" stroke="#d64545" stroke-width="4"/>
+        <path d="M34 48L47.5 20H56.5L70 48H61.5L59 42H45L42.5 48H34ZM47.8 35H56.2L52 25L47.8 35Z" fill="#ffffff"/><path d="M79 20H88V48H79V20Z" fill="#ffffff"/>
+      </g>
+    </g>
+
+    <g>
+      <rect x="994" y="206" width="256" height="256" rx="56" fill="#050505"/>
+      <circle cx="1122" cy="334" r="95" fill="#0a0a0a" stroke="#34383c"/>
+      <g fill="none" stroke="#34383c" stroke-width="3" stroke-linecap="round">
+        <path d="M1043 334H1064"/><path d="M1180 334H1201"/>
+        <path d="M1061 287L1075 301"/><path d="M1169 301L1183 287"/>
+      </g>
+      <g fill="#d64545"><circle cx="1040" cy="334" r="6"/><circle cx="1204" cy="334" r="6"/><circle cx="1057" cy="283" r="6"/><circle cx="1187" cy="283" r="6"/></g>
+      <g transform="translate(1061 292) scale(0.45)">
+    <path d="M160 4.27406L271 154.274L176 192.274L160 4.27406Z" fill="#b93636"/>
+    <path d="M94.8938 0L127.894 44L101.894 82L94.8938 0Z" fill="#b93636"/>
+    <path d="M160 4.27406L176 192.274L53 163.274L160 4.27406Z" fill="#d64545"/>
+    <path d="M93.5 2.27405L58 147.274L0 132.274L93.5 2.27405Z" fill="#d64545"/>
+    <path d="M95 0.274048L102 81.774L58 147.274L0 132.274L95 0.274048Z" fill="#d64545"/></g>
+      <g transform="translate(1105 385) scale(0.25)">
+        <rect x="2" y="2" width="132" height="64" rx="20" fill="#050505" stroke="#d64545" stroke-width="4"/>
+        <path d="M34 48L47.5 20H56.5L70 48H61.5L59 42H45L42.5 48H34ZM47.8 35H56.2L52 25L47.8 35Z" fill="#ffffff"/><path d="M79 20H88V48H79V20Z" fill="#ffffff"/>
+      </g><circle cx="1214" cy="426" r="25" fill="#050505"/><circle cx="1214" cy="426" r="18" fill="#4caf7d"/>
+    </g>
+  <text x="64" y="498" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">Основной · тёмный</text>
+  <text x="374" y="498" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">Основной · светлый</text>
+  <text x="684" y="498" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">Моно</text>
+  <text x="994" y="498" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">Доступен</text>
+  <g transform="translate(64 570)">
+    <circle cx="12" cy="12" r="12" fill="#4caf7d"/><text x="36" y="19" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="20">доступен</text>
+    <circle cx="220" cy="12" r="12" fill="#e0a33e"/><text x="244" y="19" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="20">думает</text>
+    <circle cx="410" cy="12" r="12" fill="#4a7fb5"/><text x="434" y="19" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="20">выполняет</text>
+  </g>
+  <text x="64" y="668" fill="#9ca3af" font-family="Inter, Arial, sans-serif" font-size="18">64+ px: полный аватар · 24–63 px: moko-ai-small.svg · круглая обрезка учтена</text>
+  <text x="64" y="712" fill="#6b7177" font-family="monospace" font-size="16">#d64545  #b93636  #050505  #0a0a0a  #6b7177  #9ca3af</text>
+</svg>
