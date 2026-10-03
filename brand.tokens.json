@@ -2,38 +2,64 @@
   "$schema": "https://www.designtokens.org/tr/drafts/format/",
   "meta": {
     "name": "MOKO AI",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "updated": "2026-10-03",
     "source": "https://moko.by/brandbook/"
   },
   "color": {
     "brand": {
-      "red": { "$type": "color", "$value": "#d64545", "$description": "MOKO Red; светлые грани и основной акцент" },
-      "red-dark": { "$type": "color", "$value": "#b93636", "$description": "Red Dark; тёмные грани" },
-      "black": { "$type": "color", "$value": "#050505", "$description": "Base Black" },
-      "panel": { "$type": "color", "$value": "#0a0a0a", "$description": "Тёмная панель" },
-      "grey-dim": { "$type": "color", "$value": "#6b7177", "$description": "Технические подписи" },
-      "grey": { "$type": "color", "$value": "#9ca3af", "$description": "Вторичный текст" },
-      "white": { "$type": "color", "$value": "#ffffff", "$description": "Основной текст на тёмном" }
+      "red": { "$type": "color", "$value": "#d64545" },
+      "black": { "$type": "color", "$value": "#050505" },
+      "panel": { "$type": "color", "$value": "#0a0a0a" },
+      "grey-dim": { "$type": "color", "$value": "#6b7177" },
+      "grey": { "$type": "color", "$value": "#9ca3af" },
+      "light": { "$type": "color", "$value": "#f3f3f1" },
+      "white": { "$type": "color", "$value": "#ffffff" }
     },
-    "ai": {
-      "network": { "$type": "color", "$value": "#34383c", "$description": "Тихий контур сети" },
-      "light-bg": { "$type": "color", "$value": "#f3f3f1", "$description": "Светлый фон аватара" },
-      "light-line": { "$type": "color", "$value": "#b8bdc2", "$description": "Контур на светлом фоне" },
-      "ready": { "$type": "color", "$value": "#4caf7d", "$description": "Доступен или проверено" },
-      "attention": { "$type": "color", "$value": "#e0a33e", "$description": "Думает или требует внимания" },
-      "action": { "$type": "color", "$value": "#4a7fb5", "$description": "Выполняет подтверждённое действие" }
+    "facets": {
+      "lightest": { "$type": "color", "$value": "#f56a6a" },
+      "light": { "$type": "color", "$value": "#ec5959" },
+      "bright": { "$type": "color", "$value": "#e34d4d" },
+      "mid-light": { "$type": "color", "$value": "#d94343" },
+      "mid": { "$type": "color", "$value": "#ce3d3d" },
+      "dark": { "$type": "color", "$value": "#c03838" },
+      "deep": { "$type": "color", "$value": "#b13232" }
+    },
+    "status": {
+      "available": { "$type": "color", "$value": "#4caf7d" },
+      "processing": { "$type": "color", "$value": "#e0a33e" },
+      "acting": { "$type": "color", "$value": "#4a7fb5" }
     }
   },
+  "logo": {
+    "orientation": { "$type": "string", "$value": "profile-right" },
+    "style": { "$type": "string", "$value": "low-poly" },
+    "facets": { "$type": "number", "$value": 24 },
+    "components": { "$type": "number", "$value": 3 },
+    "clear-space": { "$type": "number", "$value": 0.12 },
+    "horizontal-min-height": { "$type": "dimension", "$value": { "value": 32, "unit": "px" } }
+  },
+  "ring": {
+    "canvas": { "$type": "dimension", "$value": { "value": 384, "unit": "px" } },
+    "outer-radius": { "$type": "dimension", "$value": { "value": 178, "unit": "px" } },
+    "inner-radius": { "$type": "dimension", "$value": { "value": 170, "unit": "px" } },
+    "thickness": { "$type": "dimension", "$value": { "value": 8, "unit": "px" } }
+  },
+  "aiSignature": {
+    "font": { "$type": "fontFamily", "$value": "Jost" },
+    "weight": { "$type": "fontWeight", "$value": 600 },
+    "scaleFromBalanced": { "$type": "number", "$value": 1.8 },
+    "transform": { "$type": "string", "$value": "translate(210 232) scale(0.081 -0.081)" },
+    "liveText": { "$type": "boolean", "$value": false }
+  },
   "avatar": {
-    "canvas": { "$type": "dimension", "$value": { "value": 1024, "unit": "px" } },
-    "corner-radius": { "$type": "dimension", "$value": { "value": 224, "unit": "px" } },
-    "safe-circle-diameter": { "$type": "dimension", "$value": { "value": 760, "unit": "px" } },
+    "canvas": { "$type": "dimension", "$value": { "value": 384, "unit": "px" } },
     "full-min-size": { "$type": "dimension", "$value": { "value": 64, "unit": "px" } },
-    "small-min-size": { "$type": "dimension", "$value": { "value": 24, "unit": "px" } }
+    "compact-min-size": { "$type": "dimension", "$value": { "value": 24, "unit": "px" } },
+    "compact-max-size": { "$type": "dimension", "$value": { "value": 63, "unit": "px" } }
   },
   "type": {
-    "display": { "$type": "fontFamily", "$value": "Century Gothic" },
+    "wordmark": { "$type": "fontFamily", "$value": "Century Gothic" },
     "heading": { "$type": "fontFamily", "$value": "Jost" },
     "body": { "$type": "fontFamily", "$value": "Inter" },
     "technical": { "$type": "fontFamily", "$value": "monospace" }

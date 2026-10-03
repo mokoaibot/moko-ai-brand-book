@@ -21,3 +21,6 @@ exports/
 
 # Local scratch
 .tmp/
+
+# Persistent local deployment credentials (never commit)
+.secrets/

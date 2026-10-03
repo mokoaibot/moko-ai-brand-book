@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 136 68" width="136" height="68" role="img" aria-labelledby="title desc">
-  <title id="title">Шильдик AI</title>
-  <desc id="desc">Компактный красный шильдик с белыми векторными буквами A и I.</desc>
-  <rect x="2" y="2" width="132" height="64" rx="20" fill="#050505" stroke="#d64545" stroke-width="4"/>
-  <path d="M34 48L47.5 20H56.5L70 48H61.5L59 42H45L42.5 48H34ZM47.8 35H56.2L52 25L47.8 35Z" fill="#ffffff"/>
-  <path d="M79 20H88V48H79V20Z" fill="#ffffff"/>
-</svg>

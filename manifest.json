@@ -1,27 +1,82 @@
 {
   "name": "moko-ai-brandbook",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "updated": "2026-10-03",
   "sourceOfTruth": "SVG",
   "brandbook": "BRANDBOOK.md",
+  "approvedReference": {
+    "path": "assets/svg/source/moko-ai-horus-reference.svg",
+    "sha256": "b353fee987999584dc9e8bf025da6dc02586b9f0163b6354f4aeb2ba70d4abbd"
+  },
   "assets": [
     {
-      "id": "moko-logo-color",
+      "id": "moko-logo-mark-color",
       "path": "assets/svg/moko/logo-mark-color.svg",
-      "kind": "source-mark",
-      "usage": "Official MOKO color mark; geometry and colors are locked"
+      "kind": "source-mark"
     },
     {
-      "id": "moko-logo-white",
+      "id": "moko-logo-mark-white",
       "path": "assets/svg/moko/logo-mark-white.svg",
-      "kind": "source-mark",
-      "usage": "Monochrome white mark"
+      "kind": "source-mark"
     },
     {
-      "id": "moko-ai-badge",
-      "path": "assets/svg/components/ai-badge.svg",
-      "kind": "component",
-      "usage": "Font-independent AI label"
+      "id": "moko-logo-horizontal-white",
+      "path": "assets/svg/moko/logo-horizontal-white.svg",
+      "kind": "source-lockup",
+      "type": "Century Gothic outlines"
+    },
+    {
+      "id": "moko-logo-horizontal-black",
+      "path": "assets/svg/moko/logo-horizontal-black.svg",
+      "kind": "source-lockup",
+      "type": "Century Gothic outlines"
+    },
+    {
+      "id": "moko-ai-horus-reference",
+      "path": "assets/svg/source/moko-ai-horus-reference.svg",
+      "kind": "approved-source",
+      "facets": 24,
+      "immutable": true
+    },
+    {
+      "id": "moko-ai-horus-mark",
+      "path": "assets/svg/logo/moko-ai-horus-mark.svg",
+      "kind": "logo-mark",
+      "style": "low-poly",
+      "facets": 24
+    },
+    {
+      "id": "moko-ai-horus-mark-mono",
+      "path": "assets/svg/logo/moko-ai-horus-mark-mono.svg",
+      "kind": "logo-mark",
+      "theme": "mono"
+    },
+    {
+      "id": "moko-ai-horus-ring",
+      "path": "assets/svg/logo/moko-ai-horus-ring.svg",
+      "kind": "logo-mark",
+      "composition": "approved-mark + red-ring"
+    },
+    {
+      "id": "moko-ai-horus-ring-ai",
+      "path": "assets/svg/logo/moko-ai-horus-ring-ai.svg",
+      "kind": "logo-mark",
+      "composition": "approved-mark + red-ring + AI-180",
+      "primary": true
+    },
+    {
+      "id": "moko-ai-horus-horizontal-dark",
+      "path": "assets/svg/logo/moko-ai-horus-horizontal-dark.svg",
+      "kind": "logo-lockup",
+      "theme": "dark",
+      "type": "MOKO Century Gothic outlines + AI Jost SemiBold outlines"
+    },
+    {
+      "id": "moko-ai-horus-horizontal-light",
+      "path": "assets/svg/logo/moko-ai-horus-horizontal-light.svg",
+      "kind": "logo-lockup",
+      "theme": "light",
+      "type": "MOKO Century Gothic outlines + AI Jost SemiBold outlines"
     },
     {
       "id": "moko-ai-primary-dark",
@@ -49,15 +104,18 @@
       "id": "moko-ai-small",
       "path": "assets/svg/avatars/moko-ai-small.svg",
       "kind": "avatar",
-      "theme": "dark",
+      "theme": "compact",
       "minDisplayPx": 24,
-      "maxDisplayPx": 63
+      "maxDisplayPx": 63,
+      "aiSignature": false,
+      "facets": 0
     },
     {
       "id": "moko-ai-transparent",
       "path": "assets/svg/avatars/moko-ai-transparent.svg",
-      "kind": "lockup",
-      "theme": "transparent"
+      "kind": "avatar",
+      "theme": "transparent",
+      "minDisplayPx": 64
     },
     {
       "id": "moko-ai-online",
@@ -81,21 +139,21 @@
       "statusColor": "#4a7fb5"
     },
     {
-      "id": "avatar-family-preview",
-      "path": "assets/svg/previews/avatar-family.svg",
-      "kind": "preview"
+      "id": "horus-lowpoly-generator",
+      "path": "scripts/build_horus_lowpoly.py",
+      "kind": "generator"
     },
     {
-      "id": "post-square",
-      "path": "assets/svg/templates/post-square.svg",
-      "kind": "template",
-      "canvas": "1080x1080"
+      "id": "font-jost-variable",
+      "path": "assets/fonts/jost/Jost-Variable.ttf",
+      "kind": "font",
+      "license": "OFL-1.1"
     },
     {
-      "id": "answer-card",
-      "path": "assets/svg/templates/answer-card.svg",
-      "kind": "template",
-      "canvas": "1200x630"
+      "id": "font-inter-variable",
+      "path": "assets/fonts/inter/Inter-Variable.ttf",
+      "kind": "font",
+      "license": "OFL-1.1"
     }
   ]
 }
