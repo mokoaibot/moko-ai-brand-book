@@ -12,6 +12,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SVG_ROOT = ROOT / "assets" / "svg"
+EXPORT_ROOT = ROOT / "exports"
 MANIFEST = ROOT / "manifest.json"
 REFERENCE = SVG_ROOT / "source" / "moko-ai-horus-reference.svg"
 REFERENCE_SHA256 = "b353fee987999584dc9e8bf025da6dc02586b9f0163b6354f4aeb2ba70d4abbd"
@@ -141,6 +142,35 @@ def validate_reference(errors: list[str]) -> None:
         errors.append(f"reference: approved source hash changed: {digest}")
 
 
+def validate_exports(errors: list[str]) -> None:
+    svg_files = sorted(SVG_ROOT.rglob("*.svg"))
+    expected_png: set[Path] = set()
+    expected_jpg: set[Path] = set()
+    for source in svg_files:
+        relative = source.relative_to(SVG_ROOT)
+        png = EXPORT_ROOT / "png" / relative.with_suffix(".png")
+        jpg = EXPORT_ROOT / "jpg" / relative.with_suffix(".jpg")
+        expected_png.add(png.resolve())
+        expected_jpg.add(jpg.resolve())
+        if not png.exists():
+            errors.append(f"exports: missing PNG for {relative}")
+        elif not png.read_bytes().startswith(b"\x89PNG\r\n\x1a\n"):
+            errors.append(f"exports: invalid PNG signature for {png.relative_to(ROOT)}")
+        if not jpg.exists():
+            errors.append(f"exports: missing JPG for {relative}")
+        else:
+            data = jpg.read_bytes()
+            if not (data.startswith(b"\xff\xd8") and data.endswith(b"\xff\xd9")):
+                errors.append(f"exports: invalid JPG signature for {jpg.relative_to(ROOT)}")
+
+    actual_png = {path.resolve() for path in (EXPORT_ROOT / "png").rglob("*.png")}
+    actual_jpg = {path.resolve() for path in (EXPORT_ROOT / "jpg").rglob("*.jpg")}
+    for path in sorted(actual_png - expected_png):
+        errors.append(f"exports: unpaired PNG {path.relative_to(ROOT)}")
+    for path in sorted(actual_jpg - expected_jpg):
+        errors.append(f"exports: unpaired JPG {path.relative_to(ROOT)}")
+
+
 def validate_manifest(errors: list[str]) -> None:
     try:
         data = json.loads(MANIFEST.read_text(encoding="utf-8"))
@@ -182,6 +212,7 @@ def main() -> int:
     for path in files:
         validate_file(path, errors)
     validate_reference(errors)
+    validate_exports(errors)
     validate_manifest(errors)
 
     if errors:
@@ -190,7 +221,7 @@ def main() -> int:
         print(f"\nFAILED: {len(errors)} error(s)", file=sys.stderr)
         return 1
 
-    print(f"OK: {len(files)} SVG files validated; approved reference hash intact")
+    print(f"OK: {len(files)} SVG files and {len(files) * 2} raster exports validated; approved reference hash intact")
     return 0
 
 

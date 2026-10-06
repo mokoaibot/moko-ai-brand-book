@@ -12,12 +12,13 @@ __pycache__/
 *.py[cod]
 .venv/
 
-# Derived raster exports: keep SVG as source of truth
-exports/
+# Ad-hoc raster files are ignored; generated website downloads are committed.
 *.png
 *.webp
 *.jpg
 *.jpeg
+!exports/**/*.png
+!exports/**/*.jpg
 
 # Local scratch
 .tmp/

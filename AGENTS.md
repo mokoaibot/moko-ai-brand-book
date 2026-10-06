@@ -40,13 +40,14 @@
 ## После изменения
 
 1. Запустить `python3 scripts/build_horus_lowpoly.py`.
-2. Обновить `manifest.json` при изменении состава файлов.
-3. Добавить запись в `docs/CREATIVE-LOG.md`.
-4. Обновить `docs/CREATIVE-MEMORY.md`, если появился повторно используемый вывод.
-5. Добавить решение в `docs/DECISIONS.md`, если меняется система.
-6. Обновить `CHANGELOG.md` и номер версии при релизе.
-7. Запустить `python3 scripts/validate_svgs.py`.
-8. Проверить 24 / 40 / 64 / 128 px для аватаров.
-9. Заполнить `docs/BRANCH-HANDOFF-TEMPLATE.md` в PR.
+2. Запустить `python3 scripts/export_rasters.py`, чтобы обновить PNG и JPG.
+3. Обновить `manifest.json` при изменении состава файлов.
+4. Добавить запись в `docs/CREATIVE-LOG.md`.
+5. Обновить `docs/CREATIVE-MEMORY.md`, если появился повторно используемый вывод.
+6. Добавить решение в `docs/DECISIONS.md`, если меняется система.
+7. Обновить `CHANGELOG.md` и номер версии при релизе.
+8. Запустить `python3 scripts/validate_svgs.py`.
+9. Проверить 24 / 40 / 64 / 128 px для аватаров.
+10. Заполнить `docs/BRANCH-HANDOFF-TEMPLATE.md` в PR.
 
 История чата не является источником данных. Весь полезный контекст хранится в репозитории.

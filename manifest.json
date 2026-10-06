@@ -8,6 +8,14 @@
     "path": "assets/svg/source/moko-ai-horus-reference.svg",
     "sha256": "b353fee987999584dc9e8bf025da6dc02586b9f0163b6354f4aeb2ba70d4abbd"
   },
+  "rasterExports": {
+    "generator": "scripts/export_rasters.py",
+    "pngDirectory": "exports/png",
+    "jpgDirectory": "exports/jpg",
+    "sourceOfTruth": false,
+    "pngTransparency": true,
+    "jpgQuality": 92
+  },
   "assets": [
     {
       "id": "moko-logo-mark-color",

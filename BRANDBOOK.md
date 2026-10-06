@@ -140,7 +140,18 @@ Jost и Inter хранятся локально под SIL Open Font License 1.1
 
 ```bash
 python3 scripts/build_horus_lowpoly.py
+python3 scripts/export_rasters.py
 python3 scripts/validate_svgs.py
 ```
 
 Генератор читает только утверждённый SVG-эталон. Исходный PNG не требуется и в репозитории не хранится.
+
+## 11. Растровые загрузки
+
+Для каждого SVG-ассета опубликованы производные файлы:
+
+- `exports/png/` — PNG с прозрачностью, до 2048 px; горизонтальные версии — шириной 2400 px;
+- `exports/jpg/` — JPG quality 92 на подходящем светлом или тёмном фоне;
+- `scripts/export_rasters.py` — воспроизводимый экспорт через ImageMagick.
+
+PNG и JPG являются производными файлами. Мастер-форматом остаётся SVG.

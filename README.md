@@ -44,6 +44,10 @@ assets/
     ├── moko/               # официальные исходники MOKO
     └── source/             # утверждённый эталон формы
 
+exports/
+├── png/                    # прозрачные PNG для скачивания
+└── jpg/                    # JPG на светлом или тёмном фоне
+
 docs/
 ├── CREATIVE-LOG.md         # журнал креативов
 ├── CREATIVE-MEMORY.md      # актуальный контекст
@@ -55,10 +59,17 @@ docs/
 
 ```bash
 python3 scripts/build_horus_lowpoly.py
+python3 scripts/export_rasters.py
 python3 scripts/validate_svgs.py
 ```
 
 Генератор не использует растровый референс: форма читается из утверждённого SVG-эталона.
+
+Для каждого SVG опубликованы загрузки в PNG и JPG:
+
+- `exports/png/` — прозрачные PNG;
+- `exports/jpg/` — JPG на светлом или тёмном фоне;
+- SVG остаётся мастер-форматом.
 
 ## Ссылки
 
