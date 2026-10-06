@@ -19,6 +19,7 @@ __pycache__/
 *.jpeg
 !exports/**/*.png
 !exports/**/*.jpg
+!exports/**/*.webp
 
 # Local scratch
 .tmp/

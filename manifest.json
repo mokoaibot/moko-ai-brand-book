@@ -12,9 +12,12 @@
     "generator": "scripts/export_rasters.py",
     "pngDirectory": "exports/png",
     "jpgDirectory": "exports/jpg",
+    "webpDirectory": "exports/webp",
     "sourceOfTruth": false,
     "pngTransparency": true,
-    "jpgQuality": 92
+    "jpgQuality": 92,
+    "webpLossless": true,
+    "webpTransparency": true
   },
   "assets": [
     {

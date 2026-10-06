@@ -152,6 +152,7 @@ python3 scripts/validate_svgs.py
 
 - `exports/png/` — PNG с прозрачностью, до 2048 px; горизонтальные версии — шириной 2400 px;
 - `exports/jpg/` — JPG quality 92 на подходящем светлом или тёмном фоне;
+- `exports/webp/` — lossless WebP с прозрачностью;
 - `scripts/export_rasters.py` — воспроизводимый экспорт через ImageMagick.
 
-PNG и JPG являются производными файлами. Мастер-форматом остаётся SVG.
+PNG, JPG и WebP являются производными файлами. Мастер-форматом остаётся SVG.

@@ -40,7 +40,7 @@
 ## После изменения
 
 1. Запустить `python3 scripts/build_horus_lowpoly.py`.
-2. Запустить `python3 scripts/export_rasters.py`, чтобы обновить PNG и JPG.
+2. Запустить `python3 scripts/export_rasters.py`, чтобы обновить PNG, JPG и WebP.
 3. Обновить `manifest.json` при изменении состава файлов.
 4. Добавить запись в `docs/CREATIVE-LOG.md`.
 5. Обновить `docs/CREATIVE-MEMORY.md`, если появился повторно используемый вывод.

@@ -146,12 +146,15 @@ def validate_exports(errors: list[str]) -> None:
     svg_files = sorted(SVG_ROOT.rglob("*.svg"))
     expected_png: set[Path] = set()
     expected_jpg: set[Path] = set()
+    expected_webp: set[Path] = set()
     for source in svg_files:
         relative = source.relative_to(SVG_ROOT)
         png = EXPORT_ROOT / "png" / relative.with_suffix(".png")
         jpg = EXPORT_ROOT / "jpg" / relative.with_suffix(".jpg")
+        webp = EXPORT_ROOT / "webp" / relative.with_suffix(".webp")
         expected_png.add(png.resolve())
         expected_jpg.add(jpg.resolve())
+        expected_webp.add(webp.resolve())
         if not png.exists():
             errors.append(f"exports: missing PNG for {relative}")
         elif not png.read_bytes().startswith(b"\x89PNG\r\n\x1a\n"):
@@ -162,13 +165,22 @@ def validate_exports(errors: list[str]) -> None:
             data = jpg.read_bytes()
             if not (data.startswith(b"\xff\xd8") and data.endswith(b"\xff\xd9")):
                 errors.append(f"exports: invalid JPG signature for {jpg.relative_to(ROOT)}")
+        if not webp.exists():
+            errors.append(f"exports: missing WebP for {relative}")
+        else:
+            data = webp.read_bytes()
+            if not (data.startswith(b"RIFF") and data[8:12] == b"WEBP"):
+                errors.append(f"exports: invalid WebP signature for {webp.relative_to(ROOT)}")
 
     actual_png = {path.resolve() for path in (EXPORT_ROOT / "png").rglob("*.png")}
     actual_jpg = {path.resolve() for path in (EXPORT_ROOT / "jpg").rglob("*.jpg")}
+    actual_webp = {path.resolve() for path in (EXPORT_ROOT / "webp").rglob("*.webp")}
     for path in sorted(actual_png - expected_png):
         errors.append(f"exports: unpaired PNG {path.relative_to(ROOT)}")
     for path in sorted(actual_jpg - expected_jpg):
         errors.append(f"exports: unpaired JPG {path.relative_to(ROOT)}")
+    for path in sorted(actual_webp - expected_webp):
+        errors.append(f"exports: unpaired WebP {path.relative_to(ROOT)}")
 
 
 def validate_manifest(errors: list[str]) -> None:
@@ -221,7 +233,7 @@ def main() -> int:
         print(f"\nFAILED: {len(errors)} error(s)", file=sys.stderr)
         return 1
 
-    print(f"OK: {len(files)} SVG files and {len(files) * 2} raster exports validated; approved reference hash intact")
+    print(f"OK: {len(files)} SVG files and {len(files) * 3} raster exports validated; approved reference hash intact")
     return 0
 
 
