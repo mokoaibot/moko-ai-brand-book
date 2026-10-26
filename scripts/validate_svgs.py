@@ -8,7 +8,9 @@ import json
 import re
 import sys
 import xml.etree.ElementTree as ET
+from html.parser import HTMLParser
 from pathlib import Path
+from urllib.parse import unquote
 
 ROOT = Path(__file__).resolve().parents[1]
 SVG_ROOT = ROOT / "assets" / "svg"
@@ -46,6 +48,13 @@ EXPECTED_FACETS = {
     "moko-ai-horus-mark-mono.svg": 0,
     "moko-ai-mono.svg": 0,
     "moko-ai-small.svg": 0,
+    # Independent MOKO AI Pantheon portraits.
+    "moko-ai-anubis.svg": 20,
+    "moko-ai-ra.svg": 18,
+    "moko-ai-bastet.svg": 19,
+    "moko-ai-thoth.svg": 18,
+    "moko-ai-sobek.svg": 20,
+    "moko-ai-sekhmet.svg": 20,
 }
 
 
@@ -98,8 +107,8 @@ def validate_file(path: Path, errors: list[str]) -> None:
                 if color.lower() not in ALLOWED_COLORS:
                     error(errors, path, f"unapproved color {color}")
 
-    if ("avatars" in path.parts or "logo" in path.parts) and "text" in names:
-        error(errors, path, "logos and avatars must use outlined paths, not live <text>")
+    if ({"avatars", "logo", "pantheon"} & set(path.parts)) and "text" in names:
+        error(errors, path, "brand artwork must use outlined paths, not live <text>")
 
     expected = EXPECTED_FACETS.get(path.name)
     if expected is not None:
@@ -110,6 +119,18 @@ def validate_file(path: Path, errors: list[str]) -> None:
             error(errors, path, "missing horus-lowpoly-mark component")
         if expected == 0 and path.name not in {"moko-ai-horus-mark-mono.svg"} and "horus-silhouette-mark" not in ids:
             error(errors, path, "missing horus-silhouette-mark component")
+
+    if "pantheon" in path.parts:
+        if expected is None:
+            error(errors, path, "pantheon portrait has no declared facet count")
+        elif not 12 <= expected < 50:
+            error(errors, path, f"pantheon facet count must be 12–49, got {expected}")
+        if "pantheon-lowpoly-mark" not in ids:
+            error(errors, path, "missing pantheon-lowpoly-mark component")
+        if "moko-red-ring" not in ids:
+            error(errors, path, "missing red contour ring")
+        if "ai-signature" in ids:
+            error(errors, path, "pantheon portraits must not reuse the approved AI signature")
 
     ring_assets = {
         "moko-ai-horus-ring.svg", "moko-ai-horus-ring-ai.svg",
@@ -183,6 +204,46 @@ def validate_exports(errors: list[str]) -> None:
         errors.append(f"exports: unpaired WebP {path.relative_to(ROOT)}")
 
 
+class LocalReferenceParser(HTMLParser):
+    def __init__(self) -> None:
+        super().__init__()
+        self.references: list[str] = []
+        self.downloads: list[str] = []
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        attributes = dict(attrs)
+        reference = attributes.get("href") if tag in {"a", "link"} else attributes.get("src") if tag in {"img", "script"} else None
+        if not reference or reference.startswith(("http:", "https:", "mailto:", "data:", "#")):
+            return
+        clean = unquote(reference.split("?", 1)[0].split("#", 1)[0])
+        if clean:
+            self.references.append(clean)
+            if tag == "a" and "download" in attributes:
+                self.downloads.append(clean)
+
+
+def validate_site(errors: list[str]) -> None:
+    pages = (ROOT / "index.html", ROOT / "pantheon.html")
+    for page in pages:
+        try:
+            parser = LocalReferenceParser()
+            parser.feed(page.read_text(encoding="utf-8"))
+        except OSError as exc:
+            errors.append(f"site: cannot read {page.name}: {exc}")
+            continue
+        for reference in parser.references:
+            target = (page.parent / reference).resolve()
+            if ROOT.resolve() not in target.parents and target != ROOT.resolve():
+                errors.append(f"site: {page.name} has out-of-root reference {reference}")
+            elif not target.exists():
+                errors.append(f"site: {page.name} references missing file {reference}")
+        if page.name == "pantheon.html":
+            for suffix in (".svg", ".png", ".jpg", ".webp"):
+                count = sum(reference.endswith(suffix) for reference in parser.downloads)
+                if count != 6:
+                    errors.append(f"site: pantheon.html needs 6 {suffix} downloads, found {count}")
+
+
 def validate_manifest(errors: list[str]) -> None:
     try:
         data = json.loads(MANIFEST.read_text(encoding="utf-8"))
@@ -226,6 +287,7 @@ def main() -> int:
     validate_reference(errors)
     validate_exports(errors)
     validate_manifest(errors)
+    validate_site(errors)
 
     if errors:
         for item in errors:
@@ -233,7 +295,7 @@ def main() -> int:
         print(f"\nFAILED: {len(errors)} error(s)", file=sys.stderr)
         return 1
 
-    print(f"OK: {len(files)} SVG files and {len(files) * 3} raster exports validated; approved reference hash intact")
+    print(f"OK: {len(files)} SVG files, {len(files) * 3} raster exports and 2 site pages validated; approved reference hash intact")
     return 0
 
 

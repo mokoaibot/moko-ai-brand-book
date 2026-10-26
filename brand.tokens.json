@@ -2,8 +2,8 @@
   "$schema": "https://www.designtokens.org/tr/drafts/format/",
   "meta": {
     "name": "MOKO AI",
-    "version": "2.0.0",
-    "updated": "2026-10-03",
+    "version": "2.1.0",
+    "updated": "2026-10-26",
     "source": "https://moko.by/brandbook/"
   },
   "color": {
@@ -57,6 +57,14 @@
     "full-min-size": { "$type": "dimension", "$value": { "value": 64, "unit": "px" } },
     "compact-min-size": { "$type": "dimension", "$value": { "value": 24, "unit": "px" } },
     "compact-max-size": { "$type": "dimension", "$value": { "value": 63, "unit": "px" } }
+  },
+  "pantheon": {
+    "canvas": { "$type": "dimension", "$value": { "value": 384, "unit": "px" } },
+    "orientation": { "$type": "string", "$value": "profile-right" },
+    "facet-min": { "$type": "number", "$value": 18 },
+    "facet-max": { "$type": "number", "$value": 20 },
+    "portrait-count": { "$type": "number", "$value": 6 },
+    "replaces-primary-mark": { "$type": "boolean", "$value": false }
   },
   "type": {
     "wordmark": { "$type": "fontFamily", "$value": "Century Gothic" },

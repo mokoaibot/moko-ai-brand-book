@@ -12,7 +12,7 @@
 
 ## Зафиксированные правила
 
-- Текущая система: MOKO AI 2.0, профиль сокола бога Гора.
+- Текущая система: MOKO AI 2.1, утверждённый профиль сокола бога Гора и отдельная серия Pantheon.
 - Профиль всегда направлен вправо.
 - Эталон формы: `assets/svg/source/moko-ai-horus-reference.svg`.
 - SHA-256 эталона: `b353fee987999584dc9e8bf025da6dc02586b9f0163b6354f4aeb2ba70d4abbd`.
@@ -22,7 +22,9 @@
 - `AI`: Jost SemiBold, контуры, масштаб 180%, transform `translate(210 232) scale(0.081 -0.081)`.
 - Полная композиция используется от 64 px.
 - Для 24–63 px используется `moko-ai-small.svg` без `AI` и граней.
-- Производные файлы воспроизводятся `scripts/build_horus_lowpoly.py`.
+- Производные файлы Гора воспроизводятся `scripts/build_horus_lowpoly.py`.
+- Портреты Pantheon воспроизводятся `scripts/build_pantheon.py` и не изменяют эталон Гора.
+- В Pantheon входят Анубис, Ра, Бастет, Тот, Собек и Сехмет; каждый портрет содержит менее 50 крупных граней.
 - Использовать только утверждённую палитру из `brand.tokens.json`.
 - Wordmark `MOKO`: официальные контуры Century Gothic.
 - Заголовки: Jost. Основной текст: Inter.
@@ -40,14 +42,15 @@
 ## После изменения
 
 1. Запустить `python3 scripts/build_horus_lowpoly.py`.
-2. Запустить `python3 scripts/export_rasters.py`, чтобы обновить PNG, JPG и WebP.
-3. Обновить `manifest.json` при изменении состава файлов.
-4. Добавить запись в `docs/CREATIVE-LOG.md`.
-5. Обновить `docs/CREATIVE-MEMORY.md`, если появился повторно используемый вывод.
-6. Добавить решение в `docs/DECISIONS.md`, если меняется система.
-7. Обновить `CHANGELOG.md` и номер версии при релизе.
-8. Запустить `python3 scripts/validate_svgs.py`.
-9. Проверить 24 / 40 / 64 / 128 px для аватаров.
-10. Заполнить `docs/BRANCH-HANDOFF-TEMPLATE.md` в PR.
+2. Запустить `python3 scripts/build_pantheon.py`.
+3. Запустить `python3 scripts/export_rasters.py`, чтобы обновить PNG, JPG и WebP.
+4. Обновить `manifest.json` при изменении состава файлов.
+5. Добавить запись в `docs/CREATIVE-LOG.md`.
+6. Обновить `docs/CREATIVE-MEMORY.md`, если появился повторно используемый вывод.
+7. Добавить решение в `docs/DECISIONS.md`, если меняется система.
+8. Обновить `CHANGELOG.md` и номер версии при релизе.
+9. Запустить `python3 scripts/validate_svgs.py`.
+10. Проверить 24 / 40 / 64 / 128 px для аватаров.
+11. Заполнить `docs/BRANCH-HANDOFF-TEMPLATE.md` в PR.
 
 История чата не является источником данных. Весь полезный контекст хранится в репозитории.

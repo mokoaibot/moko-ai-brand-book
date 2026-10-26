@@ -1,7 +1,7 @@
 {
   "name": "moko-ai-brandbook",
-  "version": "2.0.0",
-  "updated": "2026-10-03",
+  "version": "2.1.0",
+  "updated": "2026-10-26",
   "sourceOfTruth": "SVG",
   "brandbook": "BRANDBOOK.md",
   "approvedReference": {
@@ -150,6 +150,65 @@
       "statusColor": "#4a7fb5"
     },
     {
+      "id": "moko-ai-anubis",
+      "path": "assets/svg/pantheon/moko-ai-anubis.svg",
+      "kind": "pantheon-portrait",
+      "deity": "Анубис",
+      "direction": "profile-right",
+      "facets": 20,
+      "primaryBrandMark": false
+    },
+    {
+      "id": "moko-ai-ra",
+      "path": "assets/svg/pantheon/moko-ai-ra.svg",
+      "kind": "pantheon-portrait",
+      "deity": "Ра",
+      "direction": "profile-right",
+      "facets": 18,
+      "primaryBrandMark": false
+    },
+    {
+      "id": "moko-ai-bastet",
+      "path": "assets/svg/pantheon/moko-ai-bastet.svg",
+      "kind": "pantheon-portrait",
+      "deity": "Бастет",
+      "direction": "profile-right",
+      "facets": 19,
+      "primaryBrandMark": false
+    },
+    {
+      "id": "moko-ai-thoth",
+      "path": "assets/svg/pantheon/moko-ai-thoth.svg",
+      "kind": "pantheon-portrait",
+      "deity": "Тот",
+      "direction": "profile-right",
+      "facets": 18,
+      "primaryBrandMark": false
+    },
+    {
+      "id": "moko-ai-sobek",
+      "path": "assets/svg/pantheon/moko-ai-sobek.svg",
+      "kind": "pantheon-portrait",
+      "deity": "Собек",
+      "direction": "profile-right",
+      "facets": 20,
+      "primaryBrandMark": false
+    },
+    {
+      "id": "moko-ai-sekhmet",
+      "path": "assets/svg/pantheon/moko-ai-sekhmet.svg",
+      "kind": "pantheon-portrait",
+      "deity": "Сехмет",
+      "direction": "profile-right",
+      "facets": 20,
+      "primaryBrandMark": false
+    },
+    {
+      "id": "pantheon-generator",
+      "path": "scripts/build_pantheon.py",
+      "kind": "generator"
+    },
+    {
       "id": "horus-lowpoly-generator",
       "path": "scripts/build_horus_lowpoly.py",
       "kind": "generator"
@@ -166,5 +225,16 @@
       "kind": "font",
       "license": "OFL-1.1"
     }
-  ]
+  ],
+  "pantheon": {
+    "page": "pantheon.html",
+    "generator": "scripts/build_pantheon.py",
+    "sourceOfTruth": "SVG",
+    "direction": "profile-right",
+    "facetsRange": [
+      18,
+      20
+    ],
+    "replacesApprovedHorus": false
+  }
 }

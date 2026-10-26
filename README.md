@@ -1,8 +1,8 @@
 # MOKO AI Brandbook
 
-Версия 2.0.0 · SVG-first
+Версия 2.1.0 · SVG-first
 
-Брендбук ИИ-аккаунта MOKO AI на основе фирменной системы [MOKO Systems](https://moko.by/brandbook/).
+Брендбук ИИ-аккаунта MOKO AI на основе фирменной системы [MOKO Systems](https://moko.by/brandbook/). Дополнительная авторская серия египетских божеств опубликована на отдельной странице `pantheon.html`.
 
 ![Основной аватар MOKO AI](assets/svg/avatars/moko-ai-primary-dark.svg)
 
@@ -26,6 +26,15 @@
 | [`moko-ai-primary-dark.svg`](assets/svg/avatars/moko-ai-primary-dark.svg) | основной аватар |
 | [`moko-ai-small.svg`](assets/svg/avatars/moko-ai-small.svg) | компактный аватар 24–63 px |
 
+## Пантеон
+
+Отдельная SVG-серия содержит шесть самостоятельных портретов: Анубис, Ра, Бастет, Тот, Собек и Сехмет. Каждый образ смотрит вправо, содержит 18–20 крупных граней и использует красную палитру и контурное кольцо MOKO AI.
+
+- страница: [`pantheon.html`](pantheon.html);
+- мастера: `assets/svg/pantheon/`;
+- генератор: `scripts/build_pantheon.py`;
+- серия не заменяет и не изменяет утверждённый знак Гора.
+
 ## Шрифты
 
 - `MOKO` — официальный wordmark Century Gothic в кривых.
@@ -42,6 +51,7 @@ assets/
     ├── avatars/            # аватары и состояния
     ├── logo/               # знак и логотипы MOKO AI
     ├── moko/               # официальные исходники MOKO
+    ├── pantheon/           # шесть самостоятельных портретов божеств
     └── source/             # утверждённый эталон формы
 
 exports/
@@ -60,6 +70,7 @@ docs/
 
 ```bash
 python3 scripts/build_horus_lowpoly.py
+python3 scripts/build_pantheon.py
 python3 scripts/export_rasters.py
 python3 scripts/validate_svgs.py
 ```
@@ -76,4 +87,5 @@ python3 scripts/validate_svgs.py
 ## Ссылки
 
 - Брендбук: https://mokoaibot.github.io/moko-ai-brand-book/
+- Пантеон: https://mokoaibot.github.io/moko-ai-brand-book/pantheon.html
 - Репозиторий: https://github.com/mokoaibot/moko-ai-brand-book
