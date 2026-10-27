@@ -92,6 +92,19 @@ def main() -> None:
         raise SystemExit("ImageMagick command 'magick' is required")
 
     files = sorted(SVG_ROOT.rglob("*.svg"))
+    expected: dict[str, set[Path]] = {"png": set(), "jpg": set(), "webp": set()}
+    for source in files:
+        relative = source.relative_to(SVG_ROOT)
+        for extension in expected:
+            expected[extension].add((EXPORT_ROOT / extension / relative.with_suffix(f".{extension}")).resolve())
+
+    removed = 0
+    for extension, paired in expected.items():
+        for stale in (EXPORT_ROOT / extension).rglob(f"*.{extension}"):
+            if stale.resolve() not in paired:
+                stale.unlink()
+                removed += 1
+
     for source in files:
         relative = source.relative_to(SVG_ROOT)
         render(
@@ -100,7 +113,10 @@ def main() -> None:
             EXPORT_ROOT / "jpg" / relative.with_suffix(".jpg"),
             EXPORT_ROOT / "webp" / relative.with_suffix(".webp"),
         )
-    print(f"Exported {len(files)} SVG assets to PNG, JPG and WebP ({len(files) * 3} files)")
+    print(
+        f"Exported {len(files)} SVG assets to PNG, JPG and WebP "
+        f"({len(files) * 3} files); removed {removed} stale export(s)"
+    )
 
 
 if __name__ == "__main__":

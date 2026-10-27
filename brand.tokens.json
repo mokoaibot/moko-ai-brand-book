@@ -2,8 +2,8 @@
   "$schema": "https://www.designtokens.org/tr/drafts/format/",
   "meta": {
     "name": "MOKO AI",
-    "version": "2.1.0",
-    "updated": "2026-10-26",
+    "version": "2.2.0",
+    "updated": "2026-10-27",
     "source": "https://moko.by/brandbook/"
   },
   "color": {
@@ -60,10 +60,11 @@
   },
   "pantheon": {
     "canvas": { "$type": "dimension", "$value": { "value": 384, "unit": "px" } },
-    "orientation": { "$type": "string", "$value": "profile-right" },
-    "facet-min": { "$type": "number", "$value": 18 },
-    "facet-max": { "$type": "number", "$value": 20 },
-    "portrait-count": { "$type": "number", "$value": 6 },
+    "views": { "$type": "string", "$value": "front|profile-right" },
+    "facet-min": { "$type": "number", "$value": 22 },
+    "facet-max": { "$type": "number", "$value": 30 },
+    "portrait-count": { "$type": "number", "$value": 11 },
+    "black-circular-field": { "$type": "boolean", "$value": true },
     "replaces-primary-mark": { "$type": "boolean", "$value": false }
   },
   "type": {

@@ -1,7 +1,7 @@
 {
   "name": "moko-ai-brandbook",
-  "version": "2.1.0",
-  "updated": "2026-10-26",
+  "version": "2.2.0",
+  "updated": "2026-10-27",
   "sourceOfTruth": "SVG",
   "brandbook": "BRANDBOOK.md",
   "approvedReference": {
@@ -150,30 +150,12 @@
       "statusColor": "#4a7fb5"
     },
     {
-      "id": "moko-ai-anubis",
-      "path": "assets/svg/pantheon/moko-ai-anubis.svg",
+      "id": "moko-ai-sekhmet",
+      "path": "assets/svg/pantheon/moko-ai-sekhmet.svg",
       "kind": "pantheon-portrait",
-      "deity": "Анубис",
-      "direction": "profile-right",
-      "facets": 20,
-      "primaryBrandMark": false
-    },
-    {
-      "id": "moko-ai-ra",
-      "path": "assets/svg/pantheon/moko-ai-ra.svg",
-      "kind": "pantheon-portrait",
-      "deity": "Ра",
-      "direction": "profile-right",
-      "facets": 18,
-      "primaryBrandMark": false
-    },
-    {
-      "id": "moko-ai-bastet",
-      "path": "assets/svg/pantheon/moko-ai-bastet.svg",
-      "kind": "pantheon-portrait",
-      "deity": "Бастет",
-      "direction": "profile-right",
-      "facets": 19,
+      "deity": "Сехмет",
+      "view": "front",
+      "facets": 28,
       "primaryBrandMark": false
     },
     {
@@ -181,26 +163,89 @@
       "path": "assets/svg/pantheon/moko-ai-thoth.svg",
       "kind": "pantheon-portrait",
       "deity": "Тот",
-      "direction": "profile-right",
-      "facets": 18,
+      "view": "profile-right",
+      "facets": 24,
       "primaryBrandMark": false
     },
     {
-      "id": "moko-ai-sobek",
-      "path": "assets/svg/pantheon/moko-ai-sobek.svg",
+      "id": "moko-ai-anubis",
+      "path": "assets/svg/pantheon/moko-ai-anubis.svg",
       "kind": "pantheon-portrait",
-      "deity": "Собек",
-      "direction": "profile-right",
-      "facets": 20,
+      "deity": "Анубис",
+      "view": "front",
+      "facets": 30,
       "primaryBrandMark": false
     },
     {
-      "id": "moko-ai-sekhmet",
-      "path": "assets/svg/pantheon/moko-ai-sekhmet.svg",
+      "id": "moko-ai-bastet",
+      "path": "assets/svg/pantheon/moko-ai-bastet.svg",
       "kind": "pantheon-portrait",
-      "deity": "Сехмет",
-      "direction": "profile-right",
-      "facets": 20,
+      "deity": "Бастет",
+      "view": "profile-right",
+      "facets": 27,
+      "primaryBrandMark": false
+    },
+    {
+      "id": "moko-ai-ra",
+      "path": "assets/svg/pantheon/moko-ai-ra.svg",
+      "kind": "pantheon-portrait",
+      "deity": "Ра",
+      "view": "profile-right",
+      "facets": 26,
+      "primaryBrandMark": false
+    },
+    {
+      "id": "moko-ai-osiris",
+      "path": "assets/svg/pantheon/moko-ai-osiris.svg",
+      "kind": "pantheon-portrait",
+      "deity": "Осирис",
+      "view": "front",
+      "facets": 24,
+      "primaryBrandMark": false
+    },
+    {
+      "id": "moko-ai-set",
+      "path": "assets/svg/pantheon/moko-ai-set.svg",
+      "kind": "pantheon-portrait",
+      "deity": "Сет",
+      "view": "profile-right",
+      "facets": 26,
+      "primaryBrandMark": false
+    },
+    {
+      "id": "moko-ai-hathor",
+      "path": "assets/svg/pantheon/moko-ai-hathor.svg",
+      "kind": "pantheon-portrait",
+      "deity": "Хатхор",
+      "view": "front",
+      "facets": 24,
+      "primaryBrandMark": false
+    },
+    {
+      "id": "moko-ai-maat",
+      "path": "assets/svg/pantheon/moko-ai-maat.svg",
+      "kind": "pantheon-portrait",
+      "deity": "Маат",
+      "view": "profile-right",
+      "facets": 24,
+      "primaryBrandMark": false
+    },
+    {
+      "id": "moko-ai-amun",
+      "path": "assets/svg/pantheon/moko-ai-amun.svg",
+      "kind": "pantheon-portrait",
+      "deity": "Амун",
+      "view": "front",
+      "facets": 28,
+      "primaryBrandMark": false
+    },
+    {
+      "id": "moko-ai-aset",
+      "path": "assets/svg/pantheon/moko-ai-aset.svg",
+      "kind": "pantheon-portrait",
+      "deity": "Исида / Асет",
+      "view": "profile-right",
+      "facets": 24,
       "primaryBrandMark": false
     },
     {
@@ -230,11 +275,18 @@
     "page": "pantheon.html",
     "generator": "scripts/build_pantheon.py",
     "sourceOfTruth": "SVG",
-    "direction": "profile-right",
-    "facetsRange": [
-      18,
-      20
+    "portraitCount": 11,
+    "views": [
+      "front",
+      "profile-right"
     ],
-    "replacesApprovedHorus": false
+    "facetsRange": [
+      22,
+      30
+    ],
+    "blackCircularField": true,
+    "outsideTransparency": true,
+    "replacesApprovedHorus": false,
+    "referencePolicy": "visual-direction-only-no-tracing"
   }
 }

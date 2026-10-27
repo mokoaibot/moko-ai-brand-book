@@ -48,13 +48,18 @@ EXPECTED_FACETS = {
     "moko-ai-horus-mark-mono.svg": 0,
     "moko-ai-mono.svg": 0,
     "moko-ai-small.svg": 0,
-    # Independent MOKO AI Pantheon portraits.
-    "moko-ai-anubis.svg": 20,
-    "moko-ai-ra.svg": 18,
-    "moko-ai-bastet.svg": 19,
-    "moko-ai-thoth.svg": 18,
-    "moko-ai-sobek.svg": 20,
-    "moko-ai-sekhmet.svg": 20,
+    # Independent MOKO AI Pantheon redesign portraits.
+    "moko-ai-sekhmet.svg": 28,
+    "moko-ai-thoth.svg": 24,
+    "moko-ai-anubis.svg": 30,
+    "moko-ai-bastet.svg": 27,
+    "moko-ai-ra.svg": 26,
+    "moko-ai-osiris.svg": 24,
+    "moko-ai-set.svg": 26,
+    "moko-ai-hathor.svg": 24,
+    "moko-ai-maat.svg": 24,
+    "moko-ai-amun.svg": 28,
+    "moko-ai-aset.svg": 24,
 }
 
 
@@ -115,7 +120,7 @@ def validate_file(path: Path, errors: list[str]) -> None:
         actual = names.count("polygon")
         if actual != expected:
             error(errors, path, f"expected {expected} polygon facets, found {actual}")
-        if expected == 24 and path.name != "moko-ai-horus-reference.svg" and "horus-lowpoly-mark" not in ids:
+        if expected == 24 and "pantheon" not in path.parts and path.name != "moko-ai-horus-reference.svg" and "horus-lowpoly-mark" not in ids:
             error(errors, path, "missing horus-lowpoly-mark component")
         if expected == 0 and path.name not in {"moko-ai-horus-mark-mono.svg"} and "horus-silhouette-mark" not in ids:
             error(errors, path, "missing horus-silhouette-mark component")
@@ -129,6 +134,8 @@ def validate_file(path: Path, errors: list[str]) -> None:
             error(errors, path, "missing pantheon-lowpoly-mark component")
         if "moko-red-ring" not in ids:
             error(errors, path, "missing red contour ring")
+        if "pantheon-field" not in ids:
+            error(errors, path, "missing black circular field")
         if "ai-signature" in ids:
             error(errors, path, "pantheon portraits must not reuse the approved AI signature")
 
@@ -240,8 +247,8 @@ def validate_site(errors: list[str]) -> None:
         if page.name == "pantheon.html":
             for suffix in (".svg", ".png", ".jpg", ".webp"):
                 count = sum(reference.endswith(suffix) for reference in parser.downloads)
-                if count != 6:
-                    errors.append(f"site: pantheon.html needs 6 {suffix} downloads, found {count}")
+                if count != 11:
+                    errors.append(f"site: pantheon.html needs 11 {suffix} downloads, found {count}")
 
 
 def validate_manifest(errors: list[str]) -> None:
