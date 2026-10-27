@@ -1,6 +1,6 @@
 {
   "name": "moko-ai-brandbook",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "updated": "2026-10-27",
   "sourceOfTruth": "SVG",
   "brandbook": "BRANDBOOK.md",
@@ -215,6 +215,10 @@
     "originalHierarchyPreserved": true,
     "artworkModified": false,
     "replacesApprovedHorus": false,
-    "referencePolicy": "exact-owner-pool-no-redrawing"
+    "referencePolicy": "exact-owner-pool-no-redrawing",
+    "deityCount": 12,
+    "variantsPerDeity": 10,
+    "navigationIconCount": 12,
+    "presentation": "human-readable Russian gallery grouped by deity"
   }
 }

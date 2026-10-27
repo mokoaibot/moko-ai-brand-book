@@ -2,7 +2,7 @@
   "$schema": "https://www.designtokens.org/tr/drafts/format/",
   "meta": {
     "name": "MOKO AI",
-    "version": "2.3.0",
+    "version": "2.3.1",
     "updated": "2026-10-27",
     "source": "https://moko.by/brandbook/"
   },
@@ -225,6 +225,18 @@
     "replaces-primary-mark": {
       "$type": "boolean",
       "$value": false
+    },
+    "deity-count": {
+      "$type": "number",
+      "$value": 12
+    },
+    "variants-per-deity": {
+      "$type": "number",
+      "$value": 10
+    },
+    "navigation-icon-count": {
+      "$type": "number",
+      "$value": 12
     }
   },
   "type": {
