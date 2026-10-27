@@ -1,6 +1,6 @@
 # MOKO AI — брендбук
 
-Версия 2.2.0 · 2026-10-27
+Версия 2.3.0 · 2026-10-27
 
 ## 1. Название
 
@@ -138,34 +138,35 @@ Jost и Inter хранятся локально под SIL Open Font License 1.1
 
 ## 10. Пантеон
 
-Дополнительная авторская серия опубликована отдельно в `pantheon.html`.
+На отдельной странице `pantheon.html` опубликован полный подготовленный владельцем пул из папки Google Drive `ПАНТЕОН`.
 
-| Божество | Ракурс и атрибут | Грани | Файл |
-|---|---|---:|---|
-| Сехмет | фронтальная львица, солнечный диск | 28 | `assets/svg/pantheon/moko-ai-sekhmet.svg` |
-| Тот | профиль ибиса, лунный серп | 24 | `assets/svg/pantheon/moko-ai-thoth.svg` |
-| Анубис | фронтальная маска шакала | 30 | `assets/svg/pantheon/moko-ai-anubis.svg` |
-| Бастет | профиль кошки, луна и ожерелье | 27 | `assets/svg/pantheon/moko-ai-bastet.svg` |
-| Ра | профиль сокола, солнечный диск | 26 | `assets/svg/pantheon/moko-ai-ra.svg` |
-| Осирис | фронтальный образ, атеф, посох и плеть | 24 | `assets/svg/pantheon/moko-ai-osiris.svg` |
-| Сет | профиль зверя Сета | 26 | `assets/svg/pantheon/moko-ai-set.svg` |
-| Хатхор | фронтальная корова, рога и диск | 24 | `assets/svg/pantheon/moko-ai-hathor.svg` |
-| Маат | женский профиль, страусиное перо | 24 | `assets/svg/pantheon/moko-ai-maat.svg` |
-| Амун | фронтальный овен, двойное перо | 28 | `assets/svg/pantheon/moko-ai-amun.svg` |
-| Исида / Асет | женский профиль, тронный знак и крыло | 24 | `assets/svg/pantheon/moko-ai-aset.svg` |
+| Каталог | Количество SVG |
+|---|---:|
+| `pantheon-svg/` | 30 |
+| `pantheon-svg-batch-2/amun/` | 3 |
+| `pantheon-svg-batch-2/aset/` | 3 |
+| `pantheon-svg-batch-2/bold-01/` | 12 |
+| `pantheon-svg-batch-2/bold-02/` | 12 |
+| `pantheon-svg-batch-2/bold-03/` | 12 |
+| `pantheon-svg-batch-2/faceted-01/` | 12 |
+| `pantheon-svg-batch-2/minimal-01/` | 12 |
+| `pantheon-svg-batch-2/minimal-02/` | 12 |
+| `pantheon-svg-batch-2/minimal-03/` | 12 |
+| **Всего** | **120** |
 
-Общие параметры: холст `384 × 384`, чёрное круглое поле, прозрачность снаружи, 22–30 крупных плоских граней, красная палитра и контурное кольцо. Серия создана заново по общему направлению референсов владельца без трассировки и не изменяет утверждённый знак Гора.
+Все файлы находятся в `assets/svg/pantheon/`. Исходные имена, структура каталогов и байты сохранены. `manifest.csv` фиксирует размер, MD5 и SHA-256 каждого SVG. Коллекция не изменяет утверждённый знак Гора.
 
 ## 11. Сборка и проверка
 
 ```bash
 python3 scripts/build_horus_lowpoly.py
-python3 scripts/build_pantheon.py
+python3 scripts/build_pantheon_gallery.py
+python3 assets/svg/pantheon/verify_snapshot.py
 python3 scripts/export_rasters.py
 python3 scripts/validate_svgs.py
 ```
 
-Генератор Гора читает только утверждённый SVG-эталон. Pantheon строится независимо из параметров `scripts/build_pantheon.py`. Растровые референсы не встраиваются и в репозитории не публикуются.
+Генератор Гора читает только утверждённый SVG-эталон. `build_pantheon_gallery.py` не создаёт изображения: он строит статическую галерею из готовых SVG владельца. Проверка Пантеона сверяет 120 файлов с зафиксированными размерами и контрольными суммами.
 
 ## 12. Растровые загрузки
 

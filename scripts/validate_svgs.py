@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import csv
 import hashlib
 import json
 import re
@@ -16,6 +17,8 @@ ROOT = Path(__file__).resolve().parents[1]
 SVG_ROOT = ROOT / "assets" / "svg"
 EXPORT_ROOT = ROOT / "exports"
 MANIFEST = ROOT / "manifest.json"
+PANTHEON_ROOT = SVG_ROOT / "pantheon"
+PANTHEON_MANIFEST = PANTHEON_ROOT / "manifest.csv"
 REFERENCE = SVG_ROOT / "source" / "moko-ai-horus-reference.svg"
 REFERENCE_SHA256 = "b353fee987999584dc9e8bf025da6dc02586b9f0163b6354f4aeb2ba70d4abbd"
 
@@ -48,18 +51,6 @@ EXPECTED_FACETS = {
     "moko-ai-horus-mark-mono.svg": 0,
     "moko-ai-mono.svg": 0,
     "moko-ai-small.svg": 0,
-    # Independent MOKO AI Pantheon redesign portraits.
-    "moko-ai-sekhmet.svg": 28,
-    "moko-ai-thoth.svg": 24,
-    "moko-ai-anubis.svg": 30,
-    "moko-ai-bastet.svg": 27,
-    "moko-ai-ra.svg": 26,
-    "moko-ai-osiris.svg": 24,
-    "moko-ai-set.svg": 26,
-    "moko-ai-hathor.svg": 24,
-    "moko-ai-maat.svg": 24,
-    "moko-ai-amun.svg": 28,
-    "moko-ai-aset.svg": 24,
 }
 
 
@@ -95,10 +86,13 @@ def validate_file(path: Path, errors: list[str]) -> None:
     elements = list(root.iter())
     names = [local_name(element.tag) for element in elements]
     ids = {element.attrib.get("id") for element in elements if element.attrib.get("id")}
+    is_owner_pantheon = PANTHEON_ROOT in path.parents
 
     if "title" not in names:
         error(errors, path, "missing accessible <title>")
-    if "desc" not in names:
+    # The owner-provided Pantheon pool is preserved byte-for-byte. Its files
+    # contain titles but no descriptions, so descriptions are supplied by HTML.
+    if "desc" not in names and not is_owner_pantheon:
         error(errors, path, "missing accessible <desc>")
 
     for element in elements:
@@ -108,12 +102,15 @@ def validate_file(path: Path, errors: list[str]) -> None:
         for key, value in element.attrib.items():
             if local_name(key) == "href" and ("://" in value or value.startswith("data:")):
                 error(errors, path, f"external or embedded href is forbidden: {value[:80]}")
-            for color in HEX_COLOR.findall(value):
-                if color.lower() not in ALLOWED_COLORS:
-                    error(errors, path, f"unapproved color {color}")
+            if not is_owner_pantheon:
+                for color in HEX_COLOR.findall(value):
+                    if color.lower() not in ALLOWED_COLORS:
+                        error(errors, path, f"unapproved color {color}")
 
     if ({"avatars", "logo", "pantheon"} & set(path.parts)) and "text" in names:
         error(errors, path, "brand artwork must use outlined paths, not live <text>")
+    if is_owner_pantheon and names.count("path") == 0:
+        error(errors, path, "owner-provided Pantheon SVG contains no path artwork")
 
     expected = EXPECTED_FACETS.get(path.name)
     if expected is not None:
@@ -124,20 +121,6 @@ def validate_file(path: Path, errors: list[str]) -> None:
             error(errors, path, "missing horus-lowpoly-mark component")
         if expected == 0 and path.name not in {"moko-ai-horus-mark-mono.svg"} and "horus-silhouette-mark" not in ids:
             error(errors, path, "missing horus-silhouette-mark component")
-
-    if "pantheon" in path.parts:
-        if expected is None:
-            error(errors, path, "pantheon portrait has no declared facet count")
-        elif not 12 <= expected < 50:
-            error(errors, path, f"pantheon facet count must be 12–49, got {expected}")
-        if "pantheon-lowpoly-mark" not in ids:
-            error(errors, path, "missing pantheon-lowpoly-mark component")
-        if "moko-red-ring" not in ids:
-            error(errors, path, "missing red contour ring")
-        if "pantheon-field" not in ids:
-            error(errors, path, "missing black circular field")
-        if "ai-signature" in ids:
-            error(errors, path, "pantheon portraits must not reuse the approved AI signature")
 
     ring_assets = {
         "moko-ai-horus-ring.svg", "moko-ai-horus-ring-ai.svg",
@@ -168,6 +151,53 @@ def validate_reference(errors: list[str]) -> None:
         return
     if digest != REFERENCE_SHA256:
         errors.append(f"reference: approved source hash changed: {digest}")
+
+
+def validate_pantheon_snapshot(errors: list[str]) -> None:
+    """Prove that every published Pantheon SVG matches the Drive snapshot."""
+    try:
+        with PANTHEON_MANIFEST.open(newline="", encoding="utf-8") as source:
+            rows = list(csv.DictReader(source))
+    except OSError as exc:
+        errors.append(f"pantheon manifest: cannot read: {exc}")
+        return
+
+    if len(rows) != 120:
+        errors.append(f"pantheon manifest: expected 120 rows, found {len(rows)}")
+
+    listed: set[Path] = set()
+    for row in rows:
+        raw_path = row.get("relative_path", "")
+        target = (PANTHEON_ROOT / raw_path).resolve()
+        if PANTHEON_ROOT.resolve() not in target.parents:
+            errors.append(f"pantheon manifest: out-of-root path {raw_path!r}")
+            continue
+        listed.add(target)
+        if row.get("mime_type") != "image/svg+xml":
+            errors.append(f"pantheon manifest: unexpected MIME for {raw_path}")
+        if not target.exists():
+            errors.append(f"pantheon manifest: missing {raw_path}")
+            continue
+        data = target.read_bytes()
+        try:
+            expected_size = int(row.get("size_bytes", "-1"))
+        except ValueError:
+            expected_size = -1
+        if len(data) != expected_size:
+            errors.append(
+                f"pantheon manifest: size mismatch for {raw_path}: "
+                f"{len(data)} != {expected_size}"
+            )
+        if hashlib.md5(data).hexdigest() != row.get("md5"):
+            errors.append(f"pantheon manifest: MD5 mismatch for {raw_path}")
+        if hashlib.sha256(data).hexdigest() != row.get("sha256"):
+            errors.append(f"pantheon manifest: SHA-256 mismatch for {raw_path}")
+
+    actual = {path.resolve() for path in PANTHEON_ROOT.rglob("*.svg")}
+    for path in sorted(actual - listed):
+        errors.append(f"pantheon manifest: unlisted SVG {path.relative_to(ROOT)}")
+    for path in sorted(listed - actual):
+        errors.append(f"pantheon manifest: listed SVG missing {path.relative_to(ROOT)}")
 
 
 def validate_exports(errors: list[str]) -> None:
@@ -247,8 +277,8 @@ def validate_site(errors: list[str]) -> None:
         if page.name == "pantheon.html":
             for suffix in (".svg", ".png", ".jpg", ".webp"):
                 count = sum(reference.endswith(suffix) for reference in parser.downloads)
-                if count != 11:
-                    errors.append(f"site: pantheon.html needs 11 {suffix} downloads, found {count}")
+                if count != 120:
+                    errors.append(f"site: pantheon.html needs 120 {suffix} downloads, found {count}")
 
 
 def validate_manifest(errors: list[str]) -> None:
@@ -274,7 +304,13 @@ def validate_manifest(errors: list[str]) -> None:
         if not asset_path.exists():
             errors.append(f"manifest.json: missing file {raw_path}")
 
-    actual = {path.resolve() for path in SVG_ROOT.rglob("*.svg")}
+    # Core brand SVGs are listed individually. The 120-file owner Pantheon pool
+    # is indexed separately by assets/svg/pantheon/manifest.csv.
+    actual = {
+        path.resolve()
+        for path in SVG_ROOT.rglob("*.svg")
+        if PANTHEON_ROOT not in path.parents
+    }
     for path in sorted(actual - listed):
         errors.append(f"manifest.json: unlisted SVG {path.relative_to(ROOT)}")
     for path in sorted(listed - actual):
@@ -292,6 +328,7 @@ def main() -> int:
     for path in files:
         validate_file(path, errors)
     validate_reference(errors)
+    validate_pantheon_snapshot(errors)
     validate_exports(errors)
     validate_manifest(errors)
     validate_site(errors)

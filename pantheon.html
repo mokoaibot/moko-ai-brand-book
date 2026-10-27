@@ -3,41 +3,818 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Пантеон MOKO AI: 11 оригинальных образов египетских божеств в красно-чёрной low-poly системе.">
-  <title>Пантеон MOKO AI — 11 египетских божеств</title>
+  <meta name="description" content="Пантеон MOKO AI: полный подготовленный пул из 120 SVG-ассетов, загруженный из папки ПАНТЕОН владельца.">
+  <title>Пантеон MOKO AI — 120 подготовленных SVG</title>
   <style>
     @font-face{font-family:Jost;src:url("assets/fonts/jost/Jost-Variable.ttf") format("truetype");font-weight:100 900;font-display:swap}
     @font-face{font-family:Inter;src:url("assets/fonts/inter/Inter-Variable.ttf") format("truetype");font-weight:100 900;font-display:swap}
-    :root{--red:#d64545;--red-light:#f56a6a;--red-dark:#b13232;--black:#050505;--panel:#0a0a0a;--panel-2:#111314;--dim:#6b7177;--grey:#9ca3af;--white:#fff;--max:1180px}
+    :root{--red:#d64545;--red-light:#f56a6a;--black:#050505;--panel:#0a0a0a;--panel-2:#111314;--dim:#6b7177;--grey:#9ca3af;--white:#fff;--max:1320px}
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--black);color:var(--white);font:15px/1.55 Inter,Arial,sans-serif}body:before{content:"";display:block;height:5px;background:var(--red)}img{display:block;max-width:100%}a{color:inherit}code,.mono{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}.wrap{width:min(calc(100% - 40px),var(--max));margin:auto}
     nav{position:sticky;top:0;z-index:10;border-bottom:1px solid rgba(255,255,255,.1);background:rgba(5,5,5,.96);backdrop-filter:blur(12px)}.nav{min-height:66px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:14px;text-decoration:none}.brand img{width:190px}.brand span{padding-left:14px;border-left:1px solid rgba(255,255,255,.18);color:var(--grey);font:10px ui-monospace,monospace;letter-spacing:.12em}.links{display:flex;gap:20px}.links a{color:var(--grey);font-size:12px;text-decoration:none}.links a:hover,.links a[aria-current="page"]{color:var(--white)}
-    .hero{padding:72px 0;border-bottom:1px solid rgba(255,255,255,.1)}.hero-grid{display:grid;grid-template-columns:1fr minmax(320px,470px);gap:72px;align-items:center}.eyebrow{margin:0 0 14px;color:var(--red);font:700 11px/1.2 ui-monospace,monospace;letter-spacing:.16em}h1,h2,h3{font-family:Jost,Arial,sans-serif}h1{margin:0;font-size:clamp(58px,9vw,104px);font-weight:600;line-height:.88;letter-spacing:-.055em}.lead{max-width:680px;margin:24px 0 0;color:var(--grey);font-size:17px}.facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}.fact{padding:7px 10px;border:1px solid rgba(255,255,255,.14);border-radius:8px;color:var(--grey);font-size:11px}.hero-mark{padding:20px;border:1px solid rgba(255,255,255,.1);border-radius:30px;background:var(--panel)}.caption{display:flex;justify-content:space-between;margin-top:10px;color:var(--dim);font:10px ui-monospace,monospace}
-    section{padding:72px 0;border-bottom:1px solid rgba(255,255,255,.1)}.section-head{display:grid;grid-template-columns:100px 1fr;gap:18px;align-items:start;margin-bottom:34px}.num{padding-top:8px;color:var(--red);font:11px ui-monospace,monospace;letter-spacing:.12em}h2{margin:0;font-size:clamp(38px,5vw,58px);font-weight:600;line-height:1;letter-spacing:-.03em}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{min-width:0;padding:18px;border:1px solid rgba(255,255,255,.1);border-radius:17px;background:var(--panel)}.card h3{margin:15px 0 3px;font-size:25px;font-weight:600}.role{margin:0 0 8px;color:var(--red);font:700 10px ui-monospace,monospace;letter-spacing:.1em}.card p{min-height:62px;margin:0;color:var(--grey);font-size:13px}.stage{min-height:292px;display:grid;place-items:center;overflow:hidden;border-radius:12px;background:var(--panel-2)}.stage img{width:min(94%,324px)}.file{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:14px;padding-top:13px;border-top:1px solid rgba(255,255,255,.08)}.file code{color:var(--dim);font-size:10px;overflow-wrap:anywhere}.actions{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:6px}.btn{flex:none;padding:7px 9px;border:1px solid rgba(255,255,255,.18);border-radius:7px;text-decoration:none;font-size:10px;font-weight:700}.btn:hover{border-color:var(--red)}
-    .specs{margin:0;border:1px solid rgba(255,255,255,.1);border-radius:16px;overflow:hidden}.spec{display:grid;grid-template-columns:220px 1fr;gap:20px;padding:16px 19px;background:var(--panel);border-bottom:1px solid rgba(255,255,255,.08)}.spec:last-child{border-bottom:0}.spec dt{color:var(--grey)}.spec dd{margin:0}.note{margin-top:18px;padding:18px 20px;border-left:3px solid var(--red);border-radius:0 12px 12px 0;background:var(--panel);color:var(--grey);font-size:13px}.note strong{color:var(--white)}footer{padding:40px 0 60px;color:var(--dim);font-size:11px}.footer{display:flex;justify-content:space-between;gap:20px}
-    @media(max-width:940px){.hero-grid{grid-template-columns:1fr}.hero-mark{max-width:480px}.grid{grid-template-columns:1fr 1fr}}@media(max-width:650px){.wrap{width:min(calc(100% - 28px),var(--max))}.links{display:none}.brand span{display:none}.hero,section{padding:52px 0}.section-head{grid-template-columns:1fr;gap:8px}.grid{grid-template-columns:1fr}.spec{grid-template-columns:1fr;gap:4px}.card p{min-height:0}.footer{flex-direction:column}}
+    .hero{padding:72px 0;border-bottom:1px solid rgba(255,255,255,.1)}.hero-grid{display:grid;grid-template-columns:1fr minmax(320px,470px);gap:72px;align-items:center}.eyebrow{margin:0 0 14px;color:var(--red);font:700 11px/1.2 ui-monospace,monospace;letter-spacing:.16em}h1,h2,h3{font-family:Jost,Arial,sans-serif}h1{margin:0;font-size:clamp(58px,9vw,104px);font-weight:600;line-height:.88;letter-spacing:-.055em}.lead{max-width:700px;margin:24px 0 0;color:var(--grey);font-size:17px}.facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}.fact{padding:7px 10px;border:1px solid rgba(255,255,255,.14);border-radius:8px;color:var(--grey);font-size:11px}.hero-mark{padding:20px;border:1px solid rgba(255,255,255,.1);border-radius:30px;background:var(--panel)}.hero-mark img{width:100%;aspect-ratio:1;object-fit:contain}.caption{display:flex;justify-content:space-between;gap:14px;margin-top:10px;color:var(--dim);font:10px ui-monospace,monospace}
+    .pool-nav{padding:20px 0;border-bottom:1px solid rgba(255,255,255,.1);background:#080808}.pool-links{display:flex;flex-wrap:wrap;gap:8px}.pool-links a{padding:8px 10px;border:1px solid rgba(255,255,255,.12);border-radius:8px;color:var(--grey);font-size:11px;text-decoration:none}.pool-links a:hover{border-color:var(--red);color:var(--white)}.pool-links span{color:var(--red)}
+    section{padding:68px 0;border-bottom:1px solid rgba(255,255,255,.1);scroll-margin-top:66px}.section-head{display:grid;grid-template-columns:100px 1fr;gap:18px;align-items:start;margin-bottom:28px}.section-head p{margin:8px 0 0;color:var(--grey)}.num{padding-top:8px;color:var(--red);font:11px ui-monospace,monospace;letter-spacing:.12em}h2{margin:0;font-size:clamp(36px,5vw,54px);font-weight:600;line-height:1;letter-spacing:-.03em}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.card{min-width:0;padding:14px;border:1px solid rgba(255,255,255,.1);border-radius:16px;background:var(--panel)}.card-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:13px}.card h3{margin:0;font-size:21px;font-weight:600}.format{padding:3px 6px;border:1px solid rgba(255,255,255,.13);border-radius:5px;color:var(--dim);font:9px ui-monospace,monospace}.role{margin:2px 0 0;color:var(--red);font:700 9px ui-monospace,monospace;letter-spacing:.1em}.stage{min-height:232px;display:grid;place-items:center;overflow:hidden;border-radius:11px;background:var(--panel-2)}.stage img{width:min(94%,238px);height:220px;object-fit:contain}.file{display:grid;gap:10px;margin-top:12px;padding-top:11px;border-top:1px solid rgba(255,255,255,.08)}.file code{min-height:28px;color:var(--dim);font-size:9px;overflow-wrap:anywhere}.actions{display:flex;flex-wrap:wrap;gap:5px}.btn{flex:none;padding:6px 8px;border:1px solid rgba(255,255,255,.18);border-radius:7px;text-decoration:none;font-size:9px;font-weight:700}.btn:hover{border-color:var(--red)}
+    .provenance{padding:70px 0}.specs{margin:0;border:1px solid rgba(255,255,255,.1);border-radius:16px;overflow:hidden}.spec{display:grid;grid-template-columns:220px 1fr;gap:20px;padding:16px 19px;background:var(--panel);border-bottom:1px solid rgba(255,255,255,.08)}.spec:last-child{border-bottom:0}.spec dt{color:var(--grey)}.spec dd{margin:0}.note{margin-top:18px;padding:18px 20px;border-left:3px solid var(--red);border-radius:0 12px 12px 0;background:var(--panel);color:var(--grey);font-size:13px}.note strong{color:var(--white)}footer{padding:40px 0 60px;color:var(--dim);font-size:11px}.footer{display:flex;justify-content:space-between;gap:20px}
+    @media(max-width:1120px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:940px){.hero-grid{grid-template-columns:1fr}.hero-mark{max-width:480px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:650px){.wrap{width:min(calc(100% - 28px),var(--max))}.links{display:none}.brand span{display:none}.hero,section{padding:52px 0}.section-head{grid-template-columns:1fr;gap:8px}.grid{grid-template-columns:1fr}.spec{grid-template-columns:1fr;gap:4px}.footer{flex-direction:column}}
   </style>
 </head>
 <body>
-  <nav aria-label="Разделы страницы"><div class="wrap nav"><a class="brand" href="index.html" aria-label="Вернуться в брендбук MOKO AI"><img src="assets/svg/logo/moko-ai-horus-horizontal-dark.svg" alt="MOKO AI"><span>ПАНТЕОН</span></a><div class="links"><a href="index.html">Брендбук</a><a href="#collection" aria-current="page">Божества</a><a href="#system">Система</a></div><span class="mono" style="color:var(--dim);font-size:10px">11 / 11</span></div></nav>
+  <nav aria-label="Разделы страницы"><div class="wrap nav"><a class="brand" href="index.html" aria-label="Вернуться в брендбук MOKO AI"><img src="assets/svg/logo/moko-ai-horus-horizontal-dark.svg" alt="MOKO AI"><span>ПАНТЕОН</span></a><div class="links"><a href="index.html">Брендбук</a><a href="#collection" aria-current="page">Коллекции</a><a href="#source">Источник</a></div><span class="mono" style="color:var(--dim);font-size:10px">120 / 120</span></div></nav>
   <main id="top">
-    <header class="hero"><div class="wrap hero-grid"><div><p class="eyebrow">АВТОРСКАЯ SVG-СЕРИЯ · REDESIGN 02</p><h1>Пантеон</h1><p class="lead">Одиннадцать самостоятельных образов с выраженной египетской атрибутикой, красной low-poly пластикой и чёрным негативным пространством.</p><div class="facts"><span class="fact">11 оригинальных образов</span><span class="fact">22–30 крупных граней</span><span class="fact">SVG source of truth</span><span class="fact">PNG · JPG · WEBP</span></div></div><figure class="hero-mark"><img src="assets/svg/pantheon/moko-ai-sekhmet.svg" alt="Фронтальная геометрическая маска Сехмет"><figcaption class="caption"><span>SEKHMET / REDESIGN 02</span><span>384 × 384 SVG</span></figcaption></figure></div></header>
-
-    <section id="collection"><div class="wrap"><div class="section-head"><div class="num">01 / БОЖЕСТВА</div><h2>Одиннадцать образов</h2></div><div class="grid">
-      <article class="card"><div class="stage"><img src="assets/svg/pantheon/moko-ai-sekhmet.svg" alt="Сехмет, фронтальная маска львицы"></div><h3>Сехмет</h3><div class="role">ЛЬВИЦА · СОЛНЕЧНЫЙ ДИСК · 28 ГРАНЕЙ</div><p>Фронтальная маска львицы с диском, рогами, боковыми панелями гривы и жёсткой симметрией.</p><div class="file"><code>moko-ai-sekhmet</code><span class="actions"><a class="btn" href="assets/svg/pantheon/moko-ai-sekhmet.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/moko-ai-sekhmet.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/moko-ai-sekhmet.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/moko-ai-sekhmet.webp" download>WEBP</a></span></div></article>
-      <article class="card"><div class="stage"><img src="assets/svg/pantheon/moko-ai-thoth.svg" alt="Тот, профиль ибиса с лунным серпом"></div><h3>Тот</h3><div class="role">ИБИС · ЛУННЫЙ СЕРП · 24 ГРАНИ</div><p>Вытянутый профиль ибиса с длинным изогнутым клювом и крупным лунным знаком.</p><div class="file"><code>moko-ai-thoth</code><span class="actions"><a class="btn" href="assets/svg/pantheon/moko-ai-thoth.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/moko-ai-thoth.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/moko-ai-thoth.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/moko-ai-thoth.webp" download>WEBP</a></span></div></article>
-      <article class="card"><div class="stage"><img src="assets/svg/pantheon/moko-ai-anubis.svg" alt="Анубис, фронтальная маска шакала"></div><h3>Анубис</h3><div class="role">ШАКАЛ · ВЫСОКИЕ УШИ · 30 ГРАНЕЙ</div><p>Фронтальная маска с длинными ушами, узкой мордой и геометрическими панелями головного убора.</p><div class="file"><code>moko-ai-anubis</code><span class="actions"><a class="btn" href="assets/svg/pantheon/moko-ai-anubis.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/moko-ai-anubis.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/moko-ai-anubis.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/moko-ai-anubis.webp" download>WEBP</a></span></div></article>
-      <article class="card"><div class="stage"><img src="assets/svg/pantheon/moko-ai-bastet.svg" alt="Бастет, профиль кошки с ожерельем"></div><h3>Бастет</h3><div class="role">КОШКА · ЛУНА · 27 ГРАНЕЙ</div><p>Профиль кошки с египетским глазом, усами, лунным знаком и широким ожерельем.</p><div class="file"><code>moko-ai-bastet</code><span class="actions"><a class="btn" href="assets/svg/pantheon/moko-ai-bastet.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/moko-ai-bastet.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/moko-ai-bastet.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/moko-ai-bastet.webp" download>WEBP</a></span></div></article>
-      <article class="card"><div class="stage"><img src="assets/svg/pantheon/moko-ai-ra.svg" alt="Ра, профиль солнечного сокола"></div><h3>Ра</h3><div class="role">СОКОЛ · СОЛНЦЕ · 26 ГРАНЕЙ</div><p>Солнечный сокол с коротким загнутым клювом, диском и тремя геометрическими лучами.</p><div class="file"><code>moko-ai-ra</code><span class="actions"><a class="btn" href="assets/svg/pantheon/moko-ai-ra.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/moko-ai-ra.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/moko-ai-ra.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/moko-ai-ra.webp" download>WEBP</a></span></div></article>
-      <article class="card"><div class="stage"><img src="assets/svg/pantheon/moko-ai-osiris.svg" alt="Осирис с короной, посохом и плетью"></div><h3>Осирис</h3><div class="role">АТЕФ · ПОСОХ И ПЛЕТЬ · 24 ГРАНИ</div><p>Фронтальный образ с короной атеф, длинной бородой, скрещёнными руками и царскими атрибутами.</p><div class="file"><code>moko-ai-osiris</code><span class="actions"><a class="btn" href="assets/svg/pantheon/moko-ai-osiris.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/moko-ai-osiris.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/moko-ai-osiris.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/moko-ai-osiris.webp" download>WEBP</a></span></div></article>
-      <article class="card"><div class="stage"><img src="assets/svg/pantheon/moko-ai-set.svg" alt="Сет, профиль мифического животного"></div><h3>Сет</h3><div class="role">ЗВЕРЬ СЕТА · ЖЁСТКИЙ ПРОФИЛЬ · 26 ГРАНЕЙ</div><p>Угловатый профиль с прямоугольными ушами, изогнутой мордой и контрастным солнечным диском.</p><div class="file"><code>moko-ai-set</code><span class="actions"><a class="btn" href="assets/svg/pantheon/moko-ai-set.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/moko-ai-set.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/moko-ai-set.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/moko-ai-set.webp" download>WEBP</a></span></div></article>
-      <article class="card"><div class="stage"><img src="assets/svg/pantheon/moko-ai-hathor.svg" alt="Хатхор, фронтальная маска коровы"></div><h3>Хатхор</h3><div class="role">КОРОВА · РОГА И ДИСК · 24 ГРАНИ</div><p>Симметричная маска коровы с широкими ушами и солнечным диском между выгнутыми рогами.</p><div class="file"><code>moko-ai-hathor</code><span class="actions"><a class="btn" href="assets/svg/pantheon/moko-ai-hathor.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/moko-ai-hathor.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/moko-ai-hathor.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/moko-ai-hathor.webp" download>WEBP</a></span></div></article>
-      <article class="card"><div class="stage"><img src="assets/svg/pantheon/moko-ai-maat.svg" alt="Маат, женский профиль со страусиным пером"></div><h3>Маат</h3><div class="role">ПЕРО · ПОРЯДОК · 24 ГРАНИ</div><p>Человеческий профиль с высоким страусиным пером, прямой осанкой и геометрическим ожерельем.</p><div class="file"><code>moko-ai-maat</code><span class="actions"><a class="btn" href="assets/svg/pantheon/moko-ai-maat.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/moko-ai-maat.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/moko-ai-maat.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/moko-ai-maat.webp" download>WEBP</a></span></div></article>
-      <article class="card"><div class="stage"><img src="assets/svg/pantheon/moko-ai-amun.svg" alt="Амун, фронтальная маска овна"></div><h3>Амун</h3><div class="role">ОВЕН · ДВОЙНОЕ ПЕРО · 28 ГРАНЕЙ</div><p>Фронтальная маска овна с закрученными рогами, высоким двойным пером и строгой симметрией.</p><div class="file"><code>moko-ai-amun</code><span class="actions"><a class="btn" href="assets/svg/pantheon/moko-ai-amun.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/moko-ai-amun.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/moko-ai-amun.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/moko-ai-amun.webp" download>WEBP</a></span></div></article>
-      <article class="card"><div class="stage"><img src="assets/svg/pantheon/moko-ai-aset.svg" alt="Исида-Асет, женский профиль с тронным знаком"></div><h3>Исида / Асет</h3><div class="role">ТРОННЫЙ ЗНАК · КРЫЛО · 24 ГРАНИ</div><p>Человеческий профиль с тронным знаком, солнечным диском, стилизованным крылом и широким ожерельем.</p><div class="file"><code>moko-ai-aset</code><span class="actions"><a class="btn" href="assets/svg/pantheon/moko-ai-aset.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/moko-ai-aset.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/moko-ai-aset.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/moko-ai-aset.webp" download>WEBP</a></span></div></article>
-    </div></div></section>
-
-    <section id="system"><div class="wrap"><div class="section-head"><div class="num">02 / СИСТЕМА</div><h2>Общие правила</h2></div><dl class="specs"><div class="spec"><dt>Ракурс</dt><dd>Фронтальная маска или профиль выбираются по наиболее узнаваемым атрибутам конкретного божества.</dd></div><div class="spec"><dt>Геометрия</dt><dd>22–30 крупных плоских граней; менее 50 граней в каждом образе.</dd></div><div class="spec"><dt>Цвет</dt><dd>Красная палитра MOKO AI, чёрное негативное пространство и никаких градиентов.</dd></div><div class="spec"><dt>Композиция</dt><dd>Холст 384 × 384, чёрное круглое поле, красное контурное кольцо и прозрачность снаружи.</dd></div><div class="spec"><dt>Мастер</dt><dd>Самостоятельный SVG без растров, live text, фильтров и внешних ресурсов.</dd></div><div class="spec"><dt>Связь с логотипом</dt><dd>Коллекция не заменяет и не изменяет утверждённый знак Гора.</dd></div></dl><div class="note"><strong>Происхождение:</strong> все 11 композиций построены заново по общему художественному направлению предоставленных референсов, без трассировки и копирования конкретных вариантов.</div></div></section>
+    <header class="hero"><div class="wrap hero-grid"><div><p class="eyebrow">ПОЛНЫЙ ПОДГОТОВЛЕННЫЙ ПУЛ · GOOGLE DRIVE</p><h1>Пантеон</h1><p class="lead">Все 120 SVG из папки «ПАНТЕОН» владельца. Исходные файлы опубликованы без перерисовки, отбора и переименования.</p><div class="facts"><span class="fact">120 исходных SVG</span><span class="fact">10 папок коллекций</span><span class="fact">Имена и структура сохранены</span><span class="fact">SVG · PNG · JPG · WEBP</span></div></div><figure class="hero-mark"><img src="assets/svg/pantheon/pantheon-svg/anubis-01.svg" alt="Анубис 01 — подготовленный SVG из пула Пантеона"><figcaption class="caption"><span>PANTHEON-SVG / ANUBIS-01</span><span>ИЗ ПАПКИ ВЛАДЕЛЬЦА</span></figcaption></figure></div></header>
+    <div class="pool-nav" id="collection"><div class="wrap pool-links"><a href="#pantheon-svg">Основной пул <span>30</span></a><a href="#pantheon-svg-batch-2-amun">Амун <span>3</span></a><a href="#pantheon-svg-batch-2-aset">Асет <span>3</span></a><a href="#pantheon-svg-batch-2-bold-01">Bold 01 <span>12</span></a><a href="#pantheon-svg-batch-2-bold-02">Bold 02 <span>12</span></a><a href="#pantheon-svg-batch-2-bold-03">Bold 03 <span>12</span></a><a href="#pantheon-svg-batch-2-faceted-01">Faceted 01 <span>12</span></a><a href="#pantheon-svg-batch-2-minimal-01">Minimal 01 <span>12</span></a><a href="#pantheon-svg-batch-2-minimal-02">Minimal 02 <span>12</span></a><a href="#pantheon-svg-batch-2-minimal-03">Minimal 03 <span>12</span></a></div></div>
+    <section class="collection" id="pantheon-svg">
+      <div class="wrap">
+        <div class="section-head"><div class="num">01 / 030</div><div><h2>Основной пул</h2><p>30 SVG · 10 образов × 3 варианта · исходные имена сохранены</p></div></div>
+        <div class="grid">
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg/anubis-01.svg" aria-label="Открыть SVG: Анубис 01"><img src="assets/svg/pantheon/pantheon-svg/anubis-01.svg" loading="eager" decoding="async" alt="Анубис 01 — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Анубис 01</h3><span class="format">SVG</span></div>
+        <div class="role">ОСНОВНОЙ ПУЛ</div>
+        <div class="file"><code>pantheon-svg/anubis-01.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg/anubis-01.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg/anubis-01.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg/anubis-01.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg/anubis-01.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg/anubis-02.svg" aria-label="Открыть SVG: Анубис 02"><img src="assets/svg/pantheon/pantheon-svg/anubis-02.svg" loading="eager" decoding="async" alt="Анубис 02 — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Анубис 02</h3><span class="format">SVG</span></div>
+        <div class="role">ОСНОВНОЙ ПУЛ</div>
+        <div class="file"><code>pantheon-svg/anubis-02.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg/anubis-02.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg/anubis-02.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg/anubis-02.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg/anubis-02.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg/anubis-03.svg" aria-label="Открыть SVG: Анубис 03"><img src="assets/svg/pantheon/pantheon-svg/anubis-03.svg" loading="eager" decoding="async" alt="Анубис 03 — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Анубис 03</h3><span class="format">SVG</span></div>
+        <div class="role">ОСНОВНОЙ ПУЛ</div>
+        <div class="file"><code>pantheon-svg/anubis-03.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg/anubis-03.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg/anubis-03.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg/anubis-03.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg/anubis-03.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg/bastet-01.svg" aria-label="Открыть SVG: Бастет 01"><img src="assets/svg/pantheon/pantheon-svg/bastet-01.svg" loading="eager" decoding="async" alt="Бастет 01 — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Бастет 01</h3><span class="format">SVG</span></div>
+        <div class="role">ОСНОВНОЙ ПУЛ</div>
+        <div class="file"><code>pantheon-svg/bastet-01.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg/bastet-01.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg/bastet-01.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg/bastet-01.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg/bastet-01.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg/bastet-02.svg" aria-label="Открыть SVG: Бастет 02"><img src="assets/svg/pantheon/pantheon-svg/bastet-02.svg" loading="lazy" decoding="async" alt="Бастет 02 — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Бастет 02</h3><span class="format">SVG</span></div>
+        <div class="role">ОСНОВНОЙ ПУЛ</div>
+        <div class="file"><code>pantheon-svg/bastet-02.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg/bastet-02.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg/bastet-02.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg/bastet-02.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg/bastet-02.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg/bastet-03.svg" aria-label="Открыть SVG: Бастет 03"><img src="assets/svg/pantheon/pantheon-svg/bastet-03.svg" loading="lazy" decoding="async" alt="Бастет 03 — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Бастет 03</h3><span class="format">SVG</span></div>
+        <div class="role">ОСНОВНОЙ ПУЛ</div>
+        <div class="file"><code>pantheon-svg/bastet-03.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg/bastet-03.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg/bastet-03.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg/bastet-03.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg/bastet-03.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg/hathor-01.svg" aria-label="Открыть SVG: Хатхор 01"><img src="assets/svg/pantheon/pantheon-svg/hathor-01.svg" loading="lazy" decoding="async" alt="Хатхор 01 — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Хатхор 01</h3><span class="format">SVG</span></div>
+        <div class="role">ОСНОВНОЙ ПУЛ</div>
+        <div class="file"><code>pantheon-svg/hathor-01.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg/hathor-01.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg/hathor-01.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg/hathor-01.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg/hathor-01.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg/hathor-02.svg" aria-label="Открыть SVG: Хатхор 02"><img src="assets/svg/pantheon/pantheon-svg/hathor-02.svg" loading="lazy" decoding="async" alt="Хатхор 02 — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Хатхор 02</h3><span class="format">SVG</span></div>
+        <div class="role">ОСНОВНОЙ ПУЛ</div>
+        <div class="file"><code>pantheon-svg/hathor-02.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg/hathor-02.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg/hathor-02.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg/hathor-02.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg/hathor-02.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg/hathor-03.svg" aria-label="Открыть SVG: Хатхор 03"><img src="assets/svg/pantheon/pantheon-svg/hathor-03.svg" loading="lazy" decoding="async" alt="Хатхор 03 — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Хатхор 03</h3><span class="format">SVG</span></div>
+        <div class="role">ОСНОВНОЙ ПУЛ</div>
+        <div class="file"><code>pantheon-svg/hathor-03.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg/hathor-03.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg/hathor-03.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg/hathor-03.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg/hathor-03.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg/horus-01.svg" aria-label="Открыть SVG: Гор 01"><img src="assets/svg/pantheon/pantheon-svg/horus-01.svg" loading="lazy" decoding="async" alt="Гор 01 — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Гор 01</h3><span class="format">SVG</span></div>
+        <div class="role">ОСНОВНОЙ ПУЛ</div>
+        <div class="file"><code>pantheon-svg/horus-01.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg/horus-01.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg/horus-01.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg/horus-01.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg/horus-01.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg/horus-02.svg" aria-label="Открыть SVG: Гор 02"><img src="assets/svg/pantheon/pantheon-svg/horus-02.svg" loading="lazy" decoding="async" alt="Гор 02 — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Гор 02</h3><span class="format">SVG</span></div>
+        <div class="role">ОСНОВНОЙ ПУЛ</div>
+        <div class="file"><code>pantheon-svg/horus-02.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg/horus-02.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg/horus-02.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg/horus-02.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg/horus-02.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg/horus-03.svg" aria-label="Открыть SVG: Гор 03"><img src="assets/svg/pantheon/pantheon-svg/horus-03.svg" loading="lazy" decoding="async" alt="Гор 03 — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Гор 03</h3><span class="format">SVG</span></div>
+        <div class="role">ОСНОВНОЙ ПУЛ</div>
+        <div class="file"><code>pantheon-svg/horus-03.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg/horus-03.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg/horus-03.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg/horus-03.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg/horus-03.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg/maat-01.svg" aria-label="Открыть SVG: Маат 01"><img src="assets/svg/pantheon/pantheon-svg/maat-01.svg" loading="lazy" decoding="async" alt="Маат 01 — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Маат 01</h3><span class="format">SVG</span></div>
+        <div class="role">ОСНОВНОЙ ПУЛ</div>
+        <div class="file"><code>pantheon-svg/maat-01.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg/maat-01.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg/maat-01.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg/maat-01.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg/maat-01.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg/maat-02.svg" aria-label="Открыть SVG: Маат 02"><img src="assets/svg/pantheon/pantheon-svg/maat-02.svg" loading="lazy" decoding="async" alt="Маат 02 — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Маат 02</h3><span class="format">SVG</span></div>
+        <div class="role">ОСНОВНОЙ ПУЛ</div>
+        <div class="file"><code>pantheon-svg/maat-02.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg/maat-02.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg/maat-02.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg/maat-02.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg/maat-02.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg/maat-03.svg" aria-label="Открыть SVG: Маат 03"><img src="assets/svg/pantheon/pantheon-svg/maat-03.svg" loading="lazy" decoding="async" alt="Маат 03 — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Маат 03</h3><span class="format">SVG</span></div>
+        <div class="role">ОСНОВНОЙ ПУЛ</div>
+        <div class="file"><code>pantheon-svg/maat-03.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg/maat-03.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg/maat-03.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg/maat-03.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg/maat-03.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg/osiris-01.svg" aria-label="Открыть SVG: Осирис 01"><img src="assets/svg/pantheon/pantheon-svg/osiris-01.svg" loading="lazy" decoding="async" alt="Осирис 01 — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Осирис 01</h3><span class="format">SVG</span></div>
+        <div class="role">ОСНОВНОЙ ПУЛ</div>
+        <div class="file"><code>pantheon-svg/osiris-01.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg/osiris-01.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg/osiris-01.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg/osiris-01.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg/osiris-01.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg/osiris-02.svg" aria-label="Открыть SVG: Осирис 02"><img src="assets/svg/pantheon/pantheon-svg/osiris-02.svg" loading="lazy" decoding="async" alt="Осирис 02 — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Осирис 02</h3><span class="format">SVG</span></div>
+        <div class="role">ОСНОВНОЙ ПУЛ</div>
+        <div class="file"><code>pantheon-svg/osiris-02.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg/osiris-02.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg/osiris-02.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg/osiris-02.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg/osiris-02.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg/osiris-03.svg" aria-label="Открыть SVG: Осирис 03"><img src="assets/svg/pantheon/pantheon-svg/osiris-03.svg" loading="lazy" decoding="async" alt="Осирис 03 — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Осирис 03</h3><span class="format">SVG</span></div>
+        <div class="role">ОСНОВНОЙ ПУЛ</div>
+        <div class="file"><code>pantheon-svg/osiris-03.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg/osiris-03.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg/osiris-03.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg/osiris-03.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg/osiris-03.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg/ra-01.svg" aria-label="Открыть SVG: Ра 01"><img src="assets/svg/pantheon/pantheon-svg/ra-01.svg" loading="lazy" decoding="async" alt="Ра 01 — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Ра 01</h3><span class="format">SVG</span></div>
+        <div class="role">ОСНОВНОЙ ПУЛ</div>
+        <div class="file"><code>pantheon-svg/ra-01.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg/ra-01.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg/ra-01.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg/ra-01.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg/ra-01.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg/ra-02.svg" aria-label="Открыть SVG: Ра 02"><img src="assets/svg/pantheon/pantheon-svg/ra-02.svg" loading="lazy" decoding="async" alt="Ра 02 — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Ра 02</h3><span class="format">SVG</span></div>
+        <div class="role">ОСНОВНОЙ ПУЛ</div>
+        <div class="file"><code>pantheon-svg/ra-02.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg/ra-02.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg/ra-02.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg/ra-02.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg/ra-02.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg/ra-03.svg" aria-label="Открыть SVG: Ра 03"><img src="assets/svg/pantheon/pantheon-svg/ra-03.svg" loading="lazy" decoding="async" alt="Ра 03 — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Ра 03</h3><span class="format">SVG</span></div>
+        <div class="role">ОСНОВНОЙ ПУЛ</div>
+        <div class="file"><code>pantheon-svg/ra-03.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg/ra-03.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg/ra-03.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg/ra-03.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg/ra-03.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg/sekhmet-01.svg" aria-label="Открыть SVG: Сехмет 01"><img src="assets/svg/pantheon/pantheon-svg/sekhmet-01.svg" loading="lazy" decoding="async" alt="Сехмет 01 — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Сехмет 01</h3><span class="format">SVG</span></div>
+        <div class="role">ОСНОВНОЙ ПУЛ</div>
+        <div class="file"><code>pantheon-svg/sekhmet-01.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg/sekhmet-01.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg/sekhmet-01.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg/sekhmet-01.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg/sekhmet-01.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg/sekhmet-02.svg" aria-label="Открыть SVG: Сехмет 02"><img src="assets/svg/pantheon/pantheon-svg/sekhmet-02.svg" loading="lazy" decoding="async" alt="Сехмет 02 — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Сехмет 02</h3><span class="format">SVG</span></div>
+        <div class="role">ОСНОВНОЙ ПУЛ</div>
+        <div class="file"><code>pantheon-svg/sekhmet-02.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg/sekhmet-02.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg/sekhmet-02.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg/sekhmet-02.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg/sekhmet-02.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg/sekhmet-03.svg" aria-label="Открыть SVG: Сехмет 03"><img src="assets/svg/pantheon/pantheon-svg/sekhmet-03.svg" loading="lazy" decoding="async" alt="Сехмет 03 — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Сехмет 03</h3><span class="format">SVG</span></div>
+        <div class="role">ОСНОВНОЙ ПУЛ</div>
+        <div class="file"><code>pantheon-svg/sekhmet-03.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg/sekhmet-03.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg/sekhmet-03.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg/sekhmet-03.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg/sekhmet-03.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg/set-01.svg" aria-label="Открыть SVG: Сет 01"><img src="assets/svg/pantheon/pantheon-svg/set-01.svg" loading="lazy" decoding="async" alt="Сет 01 — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Сет 01</h3><span class="format">SVG</span></div>
+        <div class="role">ОСНОВНОЙ ПУЛ</div>
+        <div class="file"><code>pantheon-svg/set-01.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg/set-01.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg/set-01.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg/set-01.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg/set-01.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg/set-02.svg" aria-label="Открыть SVG: Сет 02"><img src="assets/svg/pantheon/pantheon-svg/set-02.svg" loading="lazy" decoding="async" alt="Сет 02 — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Сет 02</h3><span class="format">SVG</span></div>
+        <div class="role">ОСНОВНОЙ ПУЛ</div>
+        <div class="file"><code>pantheon-svg/set-02.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg/set-02.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg/set-02.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg/set-02.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg/set-02.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg/set-03.svg" aria-label="Открыть SVG: Сет 03"><img src="assets/svg/pantheon/pantheon-svg/set-03.svg" loading="lazy" decoding="async" alt="Сет 03 — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Сет 03</h3><span class="format">SVG</span></div>
+        <div class="role">ОСНОВНОЙ ПУЛ</div>
+        <div class="file"><code>pantheon-svg/set-03.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg/set-03.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg/set-03.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg/set-03.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg/set-03.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg/thoth-01.svg" aria-label="Открыть SVG: Тот 01"><img src="assets/svg/pantheon/pantheon-svg/thoth-01.svg" loading="lazy" decoding="async" alt="Тот 01 — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Тот 01</h3><span class="format">SVG</span></div>
+        <div class="role">ОСНОВНОЙ ПУЛ</div>
+        <div class="file"><code>pantheon-svg/thoth-01.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg/thoth-01.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg/thoth-01.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg/thoth-01.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg/thoth-01.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg/thoth-02.svg" aria-label="Открыть SVG: Тот 02"><img src="assets/svg/pantheon/pantheon-svg/thoth-02.svg" loading="lazy" decoding="async" alt="Тот 02 — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Тот 02</h3><span class="format">SVG</span></div>
+        <div class="role">ОСНОВНОЙ ПУЛ</div>
+        <div class="file"><code>pantheon-svg/thoth-02.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg/thoth-02.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg/thoth-02.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg/thoth-02.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg/thoth-02.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg/thoth-03.svg" aria-label="Открыть SVG: Тот 03"><img src="assets/svg/pantheon/pantheon-svg/thoth-03.svg" loading="lazy" decoding="async" alt="Тот 03 — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Тот 03</h3><span class="format">SVG</span></div>
+        <div class="role">ОСНОВНОЙ ПУЛ</div>
+        <div class="file"><code>pantheon-svg/thoth-03.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg/thoth-03.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg/thoth-03.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg/thoth-03.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg/thoth-03.webp" download>WEBP</a></span></div>
+      </article>
+        </div>
+      </div>
+    </section>
+    <section class="collection" id="pantheon-svg-batch-2-amun">
+      <div class="wrap">
+        <div class="section-head"><div class="num">02 / 003</div><div><h2>Амун</h2><p>3 дополнительных варианта · исходные имена сохранены</p></div></div>
+        <div class="grid">
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/amun/amun-01.svg" aria-label="Открыть SVG: Амун 01"><img src="assets/svg/pantheon/pantheon-svg-batch-2/amun/amun-01.svg" loading="lazy" decoding="async" alt="Амун 01 — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Амун 01</h3><span class="format">SVG</span></div>
+        <div class="role">АМУН</div>
+        <div class="file"><code>pantheon-svg-batch-2/amun/amun-01.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/amun/amun-01.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/amun/amun-01.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/amun/amun-01.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/amun/amun-01.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/amun/amun-02.svg" aria-label="Открыть SVG: Амун 02"><img src="assets/svg/pantheon/pantheon-svg-batch-2/amun/amun-02.svg" loading="lazy" decoding="async" alt="Амун 02 — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Амун 02</h3><span class="format">SVG</span></div>
+        <div class="role">АМУН</div>
+        <div class="file"><code>pantheon-svg-batch-2/amun/amun-02.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/amun/amun-02.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/amun/amun-02.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/amun/amun-02.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/amun/amun-02.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/amun/amun-03.svg" aria-label="Открыть SVG: Амун 03"><img src="assets/svg/pantheon/pantheon-svg-batch-2/amun/amun-03.svg" loading="lazy" decoding="async" alt="Амун 03 — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Амун 03</h3><span class="format">SVG</span></div>
+        <div class="role">АМУН</div>
+        <div class="file"><code>pantheon-svg-batch-2/amun/amun-03.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/amun/amun-03.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/amun/amun-03.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/amun/amun-03.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/amun/amun-03.webp" download>WEBP</a></span></div>
+      </article>
+        </div>
+      </div>
+    </section>
+    <section class="collection" id="pantheon-svg-batch-2-aset">
+      <div class="wrap">
+        <div class="section-head"><div class="num">03 / 003</div><div><h2>Асет</h2><p>3 дополнительных варианта · исходные имена сохранены</p></div></div>
+        <div class="grid">
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/aset/aset-01.svg" aria-label="Открыть SVG: Асет 01"><img src="assets/svg/pantheon/pantheon-svg-batch-2/aset/aset-01.svg" loading="lazy" decoding="async" alt="Асет 01 — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Асет 01</h3><span class="format">SVG</span></div>
+        <div class="role">АСЕТ</div>
+        <div class="file"><code>pantheon-svg-batch-2/aset/aset-01.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/aset/aset-01.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/aset/aset-01.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/aset/aset-01.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/aset/aset-01.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/aset/aset-02.svg" aria-label="Открыть SVG: Асет 02"><img src="assets/svg/pantheon/pantheon-svg-batch-2/aset/aset-02.svg" loading="lazy" decoding="async" alt="Асет 02 — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Асет 02</h3><span class="format">SVG</span></div>
+        <div class="role">АСЕТ</div>
+        <div class="file"><code>pantheon-svg-batch-2/aset/aset-02.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/aset/aset-02.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/aset/aset-02.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/aset/aset-02.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/aset/aset-02.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/aset/aset-03.svg" aria-label="Открыть SVG: Асет 03"><img src="assets/svg/pantheon/pantheon-svg-batch-2/aset/aset-03.svg" loading="lazy" decoding="async" alt="Асет 03 — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Асет 03</h3><span class="format">SVG</span></div>
+        <div class="role">АСЕТ</div>
+        <div class="file"><code>pantheon-svg-batch-2/aset/aset-03.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/aset/aset-03.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/aset/aset-03.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/aset/aset-03.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/aset/aset-03.webp" download>WEBP</a></span></div>
+      </article>
+        </div>
+      </div>
+    </section>
+    <section class="collection" id="pantheon-svg-batch-2-bold-01">
+      <div class="wrap">
+        <div class="section-head"><div class="num">04 / 012</div><div><h2>Bold 01</h2><p>12 образов · исходные имена сохранены</p></div></div>
+        <div class="grid">
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-01/amun.svg" aria-label="Открыть SVG: Амун"><img src="assets/svg/pantheon/pantheon-svg-batch-2/bold-01/amun.svg" loading="lazy" decoding="async" alt="Амун — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Амун</h3><span class="format">SVG</span></div>
+        <div class="role">BOLD 01</div>
+        <div class="file"><code>pantheon-svg-batch-2/bold-01/amun.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-01/amun.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/bold-01/amun.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/bold-01/amun.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/bold-01/amun.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-01/anubis.svg" aria-label="Открыть SVG: Анубис"><img src="assets/svg/pantheon/pantheon-svg-batch-2/bold-01/anubis.svg" loading="lazy" decoding="async" alt="Анубис — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Анубис</h3><span class="format">SVG</span></div>
+        <div class="role">BOLD 01</div>
+        <div class="file"><code>pantheon-svg-batch-2/bold-01/anubis.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-01/anubis.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/bold-01/anubis.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/bold-01/anubis.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/bold-01/anubis.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-01/bastet.svg" aria-label="Открыть SVG: Бастет"><img src="assets/svg/pantheon/pantheon-svg-batch-2/bold-01/bastet.svg" loading="lazy" decoding="async" alt="Бастет — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Бастет</h3><span class="format">SVG</span></div>
+        <div class="role">BOLD 01</div>
+        <div class="file"><code>pantheon-svg-batch-2/bold-01/bastet.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-01/bastet.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/bold-01/bastet.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/bold-01/bastet.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/bold-01/bastet.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-01/hathor.svg" aria-label="Открыть SVG: Хатхор"><img src="assets/svg/pantheon/pantheon-svg-batch-2/bold-01/hathor.svg" loading="lazy" decoding="async" alt="Хатхор — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Хатхор</h3><span class="format">SVG</span></div>
+        <div class="role">BOLD 01</div>
+        <div class="file"><code>pantheon-svg-batch-2/bold-01/hathor.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-01/hathor.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/bold-01/hathor.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/bold-01/hathor.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/bold-01/hathor.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-01/horus.svg" aria-label="Открыть SVG: Гор"><img src="assets/svg/pantheon/pantheon-svg-batch-2/bold-01/horus.svg" loading="lazy" decoding="async" alt="Гор — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Гор</h3><span class="format">SVG</span></div>
+        <div class="role">BOLD 01</div>
+        <div class="file"><code>pantheon-svg-batch-2/bold-01/horus.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-01/horus.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/bold-01/horus.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/bold-01/horus.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/bold-01/horus.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-01/isis.svg" aria-label="Открыть SVG: Исида"><img src="assets/svg/pantheon/pantheon-svg-batch-2/bold-01/isis.svg" loading="lazy" decoding="async" alt="Исида — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Исида</h3><span class="format">SVG</span></div>
+        <div class="role">BOLD 01</div>
+        <div class="file"><code>pantheon-svg-batch-2/bold-01/isis.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-01/isis.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/bold-01/isis.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/bold-01/isis.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/bold-01/isis.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-01/maat.svg" aria-label="Открыть SVG: Маат"><img src="assets/svg/pantheon/pantheon-svg-batch-2/bold-01/maat.svg" loading="lazy" decoding="async" alt="Маат — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Маат</h3><span class="format">SVG</span></div>
+        <div class="role">BOLD 01</div>
+        <div class="file"><code>pantheon-svg-batch-2/bold-01/maat.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-01/maat.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/bold-01/maat.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/bold-01/maat.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/bold-01/maat.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-01/osiris.svg" aria-label="Открыть SVG: Осирис"><img src="assets/svg/pantheon/pantheon-svg-batch-2/bold-01/osiris.svg" loading="lazy" decoding="async" alt="Осирис — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Осирис</h3><span class="format">SVG</span></div>
+        <div class="role">BOLD 01</div>
+        <div class="file"><code>pantheon-svg-batch-2/bold-01/osiris.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-01/osiris.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/bold-01/osiris.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/bold-01/osiris.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/bold-01/osiris.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-01/ra.svg" aria-label="Открыть SVG: Ра"><img src="assets/svg/pantheon/pantheon-svg-batch-2/bold-01/ra.svg" loading="lazy" decoding="async" alt="Ра — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Ра</h3><span class="format">SVG</span></div>
+        <div class="role">BOLD 01</div>
+        <div class="file"><code>pantheon-svg-batch-2/bold-01/ra.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-01/ra.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/bold-01/ra.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/bold-01/ra.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/bold-01/ra.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-01/sekhmet.svg" aria-label="Открыть SVG: Сехмет"><img src="assets/svg/pantheon/pantheon-svg-batch-2/bold-01/sekhmet.svg" loading="lazy" decoding="async" alt="Сехмет — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Сехмет</h3><span class="format">SVG</span></div>
+        <div class="role">BOLD 01</div>
+        <div class="file"><code>pantheon-svg-batch-2/bold-01/sekhmet.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-01/sekhmet.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/bold-01/sekhmet.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/bold-01/sekhmet.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/bold-01/sekhmet.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-01/set.svg" aria-label="Открыть SVG: Сет"><img src="assets/svg/pantheon/pantheon-svg-batch-2/bold-01/set.svg" loading="lazy" decoding="async" alt="Сет — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Сет</h3><span class="format">SVG</span></div>
+        <div class="role">BOLD 01</div>
+        <div class="file"><code>pantheon-svg-batch-2/bold-01/set.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-01/set.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/bold-01/set.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/bold-01/set.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/bold-01/set.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-01/thoth.svg" aria-label="Открыть SVG: Тот"><img src="assets/svg/pantheon/pantheon-svg-batch-2/bold-01/thoth.svg" loading="lazy" decoding="async" alt="Тот — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Тот</h3><span class="format">SVG</span></div>
+        <div class="role">BOLD 01</div>
+        <div class="file"><code>pantheon-svg-batch-2/bold-01/thoth.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-01/thoth.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/bold-01/thoth.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/bold-01/thoth.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/bold-01/thoth.webp" download>WEBP</a></span></div>
+      </article>
+        </div>
+      </div>
+    </section>
+    <section class="collection" id="pantheon-svg-batch-2-bold-02">
+      <div class="wrap">
+        <div class="section-head"><div class="num">05 / 012</div><div><h2>Bold 02</h2><p>12 образов · исходные имена сохранены</p></div></div>
+        <div class="grid">
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-02/amun.svg" aria-label="Открыть SVG: Амун"><img src="assets/svg/pantheon/pantheon-svg-batch-2/bold-02/amun.svg" loading="lazy" decoding="async" alt="Амун — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Амун</h3><span class="format">SVG</span></div>
+        <div class="role">BOLD 02</div>
+        <div class="file"><code>pantheon-svg-batch-2/bold-02/amun.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-02/amun.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/bold-02/amun.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/bold-02/amun.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/bold-02/amun.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-02/anubis.svg" aria-label="Открыть SVG: Анубис"><img src="assets/svg/pantheon/pantheon-svg-batch-2/bold-02/anubis.svg" loading="lazy" decoding="async" alt="Анубис — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Анубис</h3><span class="format">SVG</span></div>
+        <div class="role">BOLD 02</div>
+        <div class="file"><code>pantheon-svg-batch-2/bold-02/anubis.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-02/anubis.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/bold-02/anubis.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/bold-02/anubis.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/bold-02/anubis.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-02/bastet.svg" aria-label="Открыть SVG: Бастет"><img src="assets/svg/pantheon/pantheon-svg-batch-2/bold-02/bastet.svg" loading="lazy" decoding="async" alt="Бастет — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Бастет</h3><span class="format">SVG</span></div>
+        <div class="role">BOLD 02</div>
+        <div class="file"><code>pantheon-svg-batch-2/bold-02/bastet.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-02/bastet.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/bold-02/bastet.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/bold-02/bastet.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/bold-02/bastet.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-02/hathor.svg" aria-label="Открыть SVG: Хатхор"><img src="assets/svg/pantheon/pantheon-svg-batch-2/bold-02/hathor.svg" loading="lazy" decoding="async" alt="Хатхор — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Хатхор</h3><span class="format">SVG</span></div>
+        <div class="role">BOLD 02</div>
+        <div class="file"><code>pantheon-svg-batch-2/bold-02/hathor.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-02/hathor.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/bold-02/hathor.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/bold-02/hathor.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/bold-02/hathor.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-02/horus.svg" aria-label="Открыть SVG: Гор"><img src="assets/svg/pantheon/pantheon-svg-batch-2/bold-02/horus.svg" loading="lazy" decoding="async" alt="Гор — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Гор</h3><span class="format">SVG</span></div>
+        <div class="role">BOLD 02</div>
+        <div class="file"><code>pantheon-svg-batch-2/bold-02/horus.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-02/horus.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/bold-02/horus.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/bold-02/horus.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/bold-02/horus.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-02/isis.svg" aria-label="Открыть SVG: Исида"><img src="assets/svg/pantheon/pantheon-svg-batch-2/bold-02/isis.svg" loading="lazy" decoding="async" alt="Исида — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Исида</h3><span class="format">SVG</span></div>
+        <div class="role">BOLD 02</div>
+        <div class="file"><code>pantheon-svg-batch-2/bold-02/isis.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-02/isis.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/bold-02/isis.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/bold-02/isis.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/bold-02/isis.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-02/maat.svg" aria-label="Открыть SVG: Маат"><img src="assets/svg/pantheon/pantheon-svg-batch-2/bold-02/maat.svg" loading="lazy" decoding="async" alt="Маат — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Маат</h3><span class="format">SVG</span></div>
+        <div class="role">BOLD 02</div>
+        <div class="file"><code>pantheon-svg-batch-2/bold-02/maat.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-02/maat.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/bold-02/maat.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/bold-02/maat.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/bold-02/maat.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-02/osiris.svg" aria-label="Открыть SVG: Осирис"><img src="assets/svg/pantheon/pantheon-svg-batch-2/bold-02/osiris.svg" loading="lazy" decoding="async" alt="Осирис — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Осирис</h3><span class="format">SVG</span></div>
+        <div class="role">BOLD 02</div>
+        <div class="file"><code>pantheon-svg-batch-2/bold-02/osiris.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-02/osiris.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/bold-02/osiris.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/bold-02/osiris.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/bold-02/osiris.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-02/ra.svg" aria-label="Открыть SVG: Ра"><img src="assets/svg/pantheon/pantheon-svg-batch-2/bold-02/ra.svg" loading="lazy" decoding="async" alt="Ра — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Ра</h3><span class="format">SVG</span></div>
+        <div class="role">BOLD 02</div>
+        <div class="file"><code>pantheon-svg-batch-2/bold-02/ra.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-02/ra.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/bold-02/ra.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/bold-02/ra.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/bold-02/ra.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-02/sekhmet.svg" aria-label="Открыть SVG: Сехмет"><img src="assets/svg/pantheon/pantheon-svg-batch-2/bold-02/sekhmet.svg" loading="lazy" decoding="async" alt="Сехмет — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Сехмет</h3><span class="format">SVG</span></div>
+        <div class="role">BOLD 02</div>
+        <div class="file"><code>pantheon-svg-batch-2/bold-02/sekhmet.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-02/sekhmet.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/bold-02/sekhmet.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/bold-02/sekhmet.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/bold-02/sekhmet.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-02/set.svg" aria-label="Открыть SVG: Сет"><img src="assets/svg/pantheon/pantheon-svg-batch-2/bold-02/set.svg" loading="lazy" decoding="async" alt="Сет — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Сет</h3><span class="format">SVG</span></div>
+        <div class="role">BOLD 02</div>
+        <div class="file"><code>pantheon-svg-batch-2/bold-02/set.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-02/set.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/bold-02/set.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/bold-02/set.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/bold-02/set.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-02/thoth.svg" aria-label="Открыть SVG: Тот"><img src="assets/svg/pantheon/pantheon-svg-batch-2/bold-02/thoth.svg" loading="lazy" decoding="async" alt="Тот — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Тот</h3><span class="format">SVG</span></div>
+        <div class="role">BOLD 02</div>
+        <div class="file"><code>pantheon-svg-batch-2/bold-02/thoth.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-02/thoth.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/bold-02/thoth.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/bold-02/thoth.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/bold-02/thoth.webp" download>WEBP</a></span></div>
+      </article>
+        </div>
+      </div>
+    </section>
+    <section class="collection" id="pantheon-svg-batch-2-bold-03">
+      <div class="wrap">
+        <div class="section-head"><div class="num">06 / 012</div><div><h2>Bold 03</h2><p>12 образов · исходные имена сохранены</p></div></div>
+        <div class="grid">
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-03/amun.svg" aria-label="Открыть SVG: Амун"><img src="assets/svg/pantheon/pantheon-svg-batch-2/bold-03/amun.svg" loading="lazy" decoding="async" alt="Амун — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Амун</h3><span class="format">SVG</span></div>
+        <div class="role">BOLD 03</div>
+        <div class="file"><code>pantheon-svg-batch-2/bold-03/amun.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-03/amun.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/bold-03/amun.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/bold-03/amun.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/bold-03/amun.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-03/anubis.svg" aria-label="Открыть SVG: Анубис"><img src="assets/svg/pantheon/pantheon-svg-batch-2/bold-03/anubis.svg" loading="lazy" decoding="async" alt="Анубис — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Анубис</h3><span class="format">SVG</span></div>
+        <div class="role">BOLD 03</div>
+        <div class="file"><code>pantheon-svg-batch-2/bold-03/anubis.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-03/anubis.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/bold-03/anubis.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/bold-03/anubis.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/bold-03/anubis.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-03/bastet.svg" aria-label="Открыть SVG: Бастет"><img src="assets/svg/pantheon/pantheon-svg-batch-2/bold-03/bastet.svg" loading="lazy" decoding="async" alt="Бастет — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Бастет</h3><span class="format">SVG</span></div>
+        <div class="role">BOLD 03</div>
+        <div class="file"><code>pantheon-svg-batch-2/bold-03/bastet.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-03/bastet.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/bold-03/bastet.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/bold-03/bastet.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/bold-03/bastet.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-03/hathor.svg" aria-label="Открыть SVG: Хатхор"><img src="assets/svg/pantheon/pantheon-svg-batch-2/bold-03/hathor.svg" loading="lazy" decoding="async" alt="Хатхор — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Хатхор</h3><span class="format">SVG</span></div>
+        <div class="role">BOLD 03</div>
+        <div class="file"><code>pantheon-svg-batch-2/bold-03/hathor.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-03/hathor.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/bold-03/hathor.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/bold-03/hathor.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/bold-03/hathor.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-03/horus.svg" aria-label="Открыть SVG: Гор"><img src="assets/svg/pantheon/pantheon-svg-batch-2/bold-03/horus.svg" loading="lazy" decoding="async" alt="Гор — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Гор</h3><span class="format">SVG</span></div>
+        <div class="role">BOLD 03</div>
+        <div class="file"><code>pantheon-svg-batch-2/bold-03/horus.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-03/horus.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/bold-03/horus.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/bold-03/horus.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/bold-03/horus.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-03/isis.svg" aria-label="Открыть SVG: Исида"><img src="assets/svg/pantheon/pantheon-svg-batch-2/bold-03/isis.svg" loading="lazy" decoding="async" alt="Исида — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Исида</h3><span class="format">SVG</span></div>
+        <div class="role">BOLD 03</div>
+        <div class="file"><code>pantheon-svg-batch-2/bold-03/isis.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-03/isis.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/bold-03/isis.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/bold-03/isis.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/bold-03/isis.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-03/maat.svg" aria-label="Открыть SVG: Маат"><img src="assets/svg/pantheon/pantheon-svg-batch-2/bold-03/maat.svg" loading="lazy" decoding="async" alt="Маат — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Маат</h3><span class="format">SVG</span></div>
+        <div class="role">BOLD 03</div>
+        <div class="file"><code>pantheon-svg-batch-2/bold-03/maat.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-03/maat.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/bold-03/maat.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/bold-03/maat.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/bold-03/maat.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-03/osiris.svg" aria-label="Открыть SVG: Осирис"><img src="assets/svg/pantheon/pantheon-svg-batch-2/bold-03/osiris.svg" loading="lazy" decoding="async" alt="Осирис — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Осирис</h3><span class="format">SVG</span></div>
+        <div class="role">BOLD 03</div>
+        <div class="file"><code>pantheon-svg-batch-2/bold-03/osiris.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-03/osiris.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/bold-03/osiris.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/bold-03/osiris.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/bold-03/osiris.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-03/ra.svg" aria-label="Открыть SVG: Ра"><img src="assets/svg/pantheon/pantheon-svg-batch-2/bold-03/ra.svg" loading="lazy" decoding="async" alt="Ра — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Ра</h3><span class="format">SVG</span></div>
+        <div class="role">BOLD 03</div>
+        <div class="file"><code>pantheon-svg-batch-2/bold-03/ra.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-03/ra.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/bold-03/ra.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/bold-03/ra.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/bold-03/ra.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-03/sekhmet.svg" aria-label="Открыть SVG: Сехмет"><img src="assets/svg/pantheon/pantheon-svg-batch-2/bold-03/sekhmet.svg" loading="lazy" decoding="async" alt="Сехмет — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Сехмет</h3><span class="format">SVG</span></div>
+        <div class="role">BOLD 03</div>
+        <div class="file"><code>pantheon-svg-batch-2/bold-03/sekhmet.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-03/sekhmet.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/bold-03/sekhmet.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/bold-03/sekhmet.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/bold-03/sekhmet.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-03/set.svg" aria-label="Открыть SVG: Сет"><img src="assets/svg/pantheon/pantheon-svg-batch-2/bold-03/set.svg" loading="lazy" decoding="async" alt="Сет — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Сет</h3><span class="format">SVG</span></div>
+        <div class="role">BOLD 03</div>
+        <div class="file"><code>pantheon-svg-batch-2/bold-03/set.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-03/set.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/bold-03/set.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/bold-03/set.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/bold-03/set.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-03/thoth.svg" aria-label="Открыть SVG: Тот"><img src="assets/svg/pantheon/pantheon-svg-batch-2/bold-03/thoth.svg" loading="lazy" decoding="async" alt="Тот — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Тот</h3><span class="format">SVG</span></div>
+        <div class="role">BOLD 03</div>
+        <div class="file"><code>pantheon-svg-batch-2/bold-03/thoth.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/bold-03/thoth.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/bold-03/thoth.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/bold-03/thoth.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/bold-03/thoth.webp" download>WEBP</a></span></div>
+      </article>
+        </div>
+      </div>
+    </section>
+    <section class="collection" id="pantheon-svg-batch-2-faceted-01">
+      <div class="wrap">
+        <div class="section-head"><div class="num">07 / 012</div><div><h2>Faceted 01</h2><p>12 образов · исходные имена сохранены</p></div></div>
+        <div class="grid">
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/faceted-01/amun.svg" aria-label="Открыть SVG: Амун"><img src="assets/svg/pantheon/pantheon-svg-batch-2/faceted-01/amun.svg" loading="lazy" decoding="async" alt="Амун — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Амун</h3><span class="format">SVG</span></div>
+        <div class="role">FACETED 01</div>
+        <div class="file"><code>pantheon-svg-batch-2/faceted-01/amun.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/faceted-01/amun.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/faceted-01/amun.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/faceted-01/amun.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/faceted-01/amun.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/faceted-01/anubis.svg" aria-label="Открыть SVG: Анубис"><img src="assets/svg/pantheon/pantheon-svg-batch-2/faceted-01/anubis.svg" loading="lazy" decoding="async" alt="Анубис — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Анубис</h3><span class="format">SVG</span></div>
+        <div class="role">FACETED 01</div>
+        <div class="file"><code>pantheon-svg-batch-2/faceted-01/anubis.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/faceted-01/anubis.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/faceted-01/anubis.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/faceted-01/anubis.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/faceted-01/anubis.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/faceted-01/bastet.svg" aria-label="Открыть SVG: Бастет"><img src="assets/svg/pantheon/pantheon-svg-batch-2/faceted-01/bastet.svg" loading="lazy" decoding="async" alt="Бастет — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Бастет</h3><span class="format">SVG</span></div>
+        <div class="role">FACETED 01</div>
+        <div class="file"><code>pantheon-svg-batch-2/faceted-01/bastet.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/faceted-01/bastet.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/faceted-01/bastet.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/faceted-01/bastet.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/faceted-01/bastet.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/faceted-01/hathor.svg" aria-label="Открыть SVG: Хатхор"><img src="assets/svg/pantheon/pantheon-svg-batch-2/faceted-01/hathor.svg" loading="lazy" decoding="async" alt="Хатхор — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Хатхор</h3><span class="format">SVG</span></div>
+        <div class="role">FACETED 01</div>
+        <div class="file"><code>pantheon-svg-batch-2/faceted-01/hathor.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/faceted-01/hathor.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/faceted-01/hathor.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/faceted-01/hathor.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/faceted-01/hathor.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/faceted-01/horus.svg" aria-label="Открыть SVG: Гор"><img src="assets/svg/pantheon/pantheon-svg-batch-2/faceted-01/horus.svg" loading="lazy" decoding="async" alt="Гор — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Гор</h3><span class="format">SVG</span></div>
+        <div class="role">FACETED 01</div>
+        <div class="file"><code>pantheon-svg-batch-2/faceted-01/horus.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/faceted-01/horus.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/faceted-01/horus.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/faceted-01/horus.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/faceted-01/horus.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/faceted-01/isis.svg" aria-label="Открыть SVG: Исида"><img src="assets/svg/pantheon/pantheon-svg-batch-2/faceted-01/isis.svg" loading="lazy" decoding="async" alt="Исида — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Исида</h3><span class="format">SVG</span></div>
+        <div class="role">FACETED 01</div>
+        <div class="file"><code>pantheon-svg-batch-2/faceted-01/isis.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/faceted-01/isis.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/faceted-01/isis.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/faceted-01/isis.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/faceted-01/isis.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/faceted-01/maat.svg" aria-label="Открыть SVG: Маат"><img src="assets/svg/pantheon/pantheon-svg-batch-2/faceted-01/maat.svg" loading="lazy" decoding="async" alt="Маат — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Маат</h3><span class="format">SVG</span></div>
+        <div class="role">FACETED 01</div>
+        <div class="file"><code>pantheon-svg-batch-2/faceted-01/maat.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/faceted-01/maat.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/faceted-01/maat.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/faceted-01/maat.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/faceted-01/maat.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/faceted-01/osiris.svg" aria-label="Открыть SVG: Осирис"><img src="assets/svg/pantheon/pantheon-svg-batch-2/faceted-01/osiris.svg" loading="lazy" decoding="async" alt="Осирис — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Осирис</h3><span class="format">SVG</span></div>
+        <div class="role">FACETED 01</div>
+        <div class="file"><code>pantheon-svg-batch-2/faceted-01/osiris.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/faceted-01/osiris.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/faceted-01/osiris.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/faceted-01/osiris.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/faceted-01/osiris.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/faceted-01/ra.svg" aria-label="Открыть SVG: Ра"><img src="assets/svg/pantheon/pantheon-svg-batch-2/faceted-01/ra.svg" loading="lazy" decoding="async" alt="Ра — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Ра</h3><span class="format">SVG</span></div>
+        <div class="role">FACETED 01</div>
+        <div class="file"><code>pantheon-svg-batch-2/faceted-01/ra.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/faceted-01/ra.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/faceted-01/ra.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/faceted-01/ra.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/faceted-01/ra.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/faceted-01/sekhmet.svg" aria-label="Открыть SVG: Сехмет"><img src="assets/svg/pantheon/pantheon-svg-batch-2/faceted-01/sekhmet.svg" loading="lazy" decoding="async" alt="Сехмет — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Сехмет</h3><span class="format">SVG</span></div>
+        <div class="role">FACETED 01</div>
+        <div class="file"><code>pantheon-svg-batch-2/faceted-01/sekhmet.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/faceted-01/sekhmet.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/faceted-01/sekhmet.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/faceted-01/sekhmet.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/faceted-01/sekhmet.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/faceted-01/set.svg" aria-label="Открыть SVG: Сет"><img src="assets/svg/pantheon/pantheon-svg-batch-2/faceted-01/set.svg" loading="lazy" decoding="async" alt="Сет — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Сет</h3><span class="format">SVG</span></div>
+        <div class="role">FACETED 01</div>
+        <div class="file"><code>pantheon-svg-batch-2/faceted-01/set.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/faceted-01/set.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/faceted-01/set.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/faceted-01/set.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/faceted-01/set.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/faceted-01/thoth.svg" aria-label="Открыть SVG: Тот"><img src="assets/svg/pantheon/pantheon-svg-batch-2/faceted-01/thoth.svg" loading="lazy" decoding="async" alt="Тот — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Тот</h3><span class="format">SVG</span></div>
+        <div class="role">FACETED 01</div>
+        <div class="file"><code>pantheon-svg-batch-2/faceted-01/thoth.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/faceted-01/thoth.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/faceted-01/thoth.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/faceted-01/thoth.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/faceted-01/thoth.webp" download>WEBP</a></span></div>
+      </article>
+        </div>
+      </div>
+    </section>
+    <section class="collection" id="pantheon-svg-batch-2-minimal-01">
+      <div class="wrap">
+        <div class="section-head"><div class="num">08 / 012</div><div><h2>Minimal 01</h2><p>12 образов · исходные имена сохранены</p></div></div>
+        <div class="grid">
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-01/amun.svg" aria-label="Открыть SVG: Амун"><img src="assets/svg/pantheon/pantheon-svg-batch-2/minimal-01/amun.svg" loading="lazy" decoding="async" alt="Амун — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Амун</h3><span class="format">SVG</span></div>
+        <div class="role">MINIMAL 01</div>
+        <div class="file"><code>pantheon-svg-batch-2/minimal-01/amun.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-01/amun.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/minimal-01/amun.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/minimal-01/amun.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/minimal-01/amun.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-01/anubis.svg" aria-label="Открыть SVG: Анубис"><img src="assets/svg/pantheon/pantheon-svg-batch-2/minimal-01/anubis.svg" loading="lazy" decoding="async" alt="Анубис — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Анубис</h3><span class="format">SVG</span></div>
+        <div class="role">MINIMAL 01</div>
+        <div class="file"><code>pantheon-svg-batch-2/minimal-01/anubis.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-01/anubis.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/minimal-01/anubis.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/minimal-01/anubis.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/minimal-01/anubis.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-01/bastet.svg" aria-label="Открыть SVG: Бастет"><img src="assets/svg/pantheon/pantheon-svg-batch-2/minimal-01/bastet.svg" loading="lazy" decoding="async" alt="Бастет — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Бастет</h3><span class="format">SVG</span></div>
+        <div class="role">MINIMAL 01</div>
+        <div class="file"><code>pantheon-svg-batch-2/minimal-01/bastet.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-01/bastet.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/minimal-01/bastet.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/minimal-01/bastet.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/minimal-01/bastet.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-01/hathor.svg" aria-label="Открыть SVG: Хатхор"><img src="assets/svg/pantheon/pantheon-svg-batch-2/minimal-01/hathor.svg" loading="lazy" decoding="async" alt="Хатхор — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Хатхор</h3><span class="format">SVG</span></div>
+        <div class="role">MINIMAL 01</div>
+        <div class="file"><code>pantheon-svg-batch-2/minimal-01/hathor.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-01/hathor.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/minimal-01/hathor.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/minimal-01/hathor.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/minimal-01/hathor.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-01/horus.svg" aria-label="Открыть SVG: Гор"><img src="assets/svg/pantheon/pantheon-svg-batch-2/minimal-01/horus.svg" loading="lazy" decoding="async" alt="Гор — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Гор</h3><span class="format">SVG</span></div>
+        <div class="role">MINIMAL 01</div>
+        <div class="file"><code>pantheon-svg-batch-2/minimal-01/horus.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-01/horus.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/minimal-01/horus.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/minimal-01/horus.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/minimal-01/horus.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-01/isis.svg" aria-label="Открыть SVG: Исида"><img src="assets/svg/pantheon/pantheon-svg-batch-2/minimal-01/isis.svg" loading="lazy" decoding="async" alt="Исида — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Исида</h3><span class="format">SVG</span></div>
+        <div class="role">MINIMAL 01</div>
+        <div class="file"><code>pantheon-svg-batch-2/minimal-01/isis.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-01/isis.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/minimal-01/isis.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/minimal-01/isis.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/minimal-01/isis.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-01/maat.svg" aria-label="Открыть SVG: Маат"><img src="assets/svg/pantheon/pantheon-svg-batch-2/minimal-01/maat.svg" loading="lazy" decoding="async" alt="Маат — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Маат</h3><span class="format">SVG</span></div>
+        <div class="role">MINIMAL 01</div>
+        <div class="file"><code>pantheon-svg-batch-2/minimal-01/maat.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-01/maat.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/minimal-01/maat.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/minimal-01/maat.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/minimal-01/maat.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-01/osiris.svg" aria-label="Открыть SVG: Осирис"><img src="assets/svg/pantheon/pantheon-svg-batch-2/minimal-01/osiris.svg" loading="lazy" decoding="async" alt="Осирис — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Осирис</h3><span class="format">SVG</span></div>
+        <div class="role">MINIMAL 01</div>
+        <div class="file"><code>pantheon-svg-batch-2/minimal-01/osiris.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-01/osiris.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/minimal-01/osiris.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/minimal-01/osiris.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/minimal-01/osiris.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-01/ra.svg" aria-label="Открыть SVG: Ра"><img src="assets/svg/pantheon/pantheon-svg-batch-2/minimal-01/ra.svg" loading="lazy" decoding="async" alt="Ра — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Ра</h3><span class="format">SVG</span></div>
+        <div class="role">MINIMAL 01</div>
+        <div class="file"><code>pantheon-svg-batch-2/minimal-01/ra.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-01/ra.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/minimal-01/ra.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/minimal-01/ra.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/minimal-01/ra.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-01/sekhmet.svg" aria-label="Открыть SVG: Сехмет"><img src="assets/svg/pantheon/pantheon-svg-batch-2/minimal-01/sekhmet.svg" loading="lazy" decoding="async" alt="Сехмет — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Сехмет</h3><span class="format">SVG</span></div>
+        <div class="role">MINIMAL 01</div>
+        <div class="file"><code>pantheon-svg-batch-2/minimal-01/sekhmet.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-01/sekhmet.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/minimal-01/sekhmet.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/minimal-01/sekhmet.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/minimal-01/sekhmet.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-01/set.svg" aria-label="Открыть SVG: Сет"><img src="assets/svg/pantheon/pantheon-svg-batch-2/minimal-01/set.svg" loading="lazy" decoding="async" alt="Сет — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Сет</h3><span class="format">SVG</span></div>
+        <div class="role">MINIMAL 01</div>
+        <div class="file"><code>pantheon-svg-batch-2/minimal-01/set.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-01/set.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/minimal-01/set.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/minimal-01/set.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/minimal-01/set.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-01/thoth.svg" aria-label="Открыть SVG: Тот"><img src="assets/svg/pantheon/pantheon-svg-batch-2/minimal-01/thoth.svg" loading="lazy" decoding="async" alt="Тот — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Тот</h3><span class="format">SVG</span></div>
+        <div class="role">MINIMAL 01</div>
+        <div class="file"><code>pantheon-svg-batch-2/minimal-01/thoth.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-01/thoth.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/minimal-01/thoth.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/minimal-01/thoth.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/minimal-01/thoth.webp" download>WEBP</a></span></div>
+      </article>
+        </div>
+      </div>
+    </section>
+    <section class="collection" id="pantheon-svg-batch-2-minimal-02">
+      <div class="wrap">
+        <div class="section-head"><div class="num">09 / 012</div><div><h2>Minimal 02</h2><p>12 образов · исходные имена сохранены</p></div></div>
+        <div class="grid">
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-02/amun.svg" aria-label="Открыть SVG: Амун"><img src="assets/svg/pantheon/pantheon-svg-batch-2/minimal-02/amun.svg" loading="lazy" decoding="async" alt="Амун — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Амун</h3><span class="format">SVG</span></div>
+        <div class="role">MINIMAL 02</div>
+        <div class="file"><code>pantheon-svg-batch-2/minimal-02/amun.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-02/amun.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/minimal-02/amun.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/minimal-02/amun.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/minimal-02/amun.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-02/anubis.svg" aria-label="Открыть SVG: Анубис"><img src="assets/svg/pantheon/pantheon-svg-batch-2/minimal-02/anubis.svg" loading="lazy" decoding="async" alt="Анубис — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Анубис</h3><span class="format">SVG</span></div>
+        <div class="role">MINIMAL 02</div>
+        <div class="file"><code>pantheon-svg-batch-2/minimal-02/anubis.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-02/anubis.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/minimal-02/anubis.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/minimal-02/anubis.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/minimal-02/anubis.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-02/bastet.svg" aria-label="Открыть SVG: Бастет"><img src="assets/svg/pantheon/pantheon-svg-batch-2/minimal-02/bastet.svg" loading="lazy" decoding="async" alt="Бастет — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Бастет</h3><span class="format">SVG</span></div>
+        <div class="role">MINIMAL 02</div>
+        <div class="file"><code>pantheon-svg-batch-2/minimal-02/bastet.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-02/bastet.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/minimal-02/bastet.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/minimal-02/bastet.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/minimal-02/bastet.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-02/hathor.svg" aria-label="Открыть SVG: Хатхор"><img src="assets/svg/pantheon/pantheon-svg-batch-2/minimal-02/hathor.svg" loading="lazy" decoding="async" alt="Хатхор — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Хатхор</h3><span class="format">SVG</span></div>
+        <div class="role">MINIMAL 02</div>
+        <div class="file"><code>pantheon-svg-batch-2/minimal-02/hathor.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-02/hathor.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/minimal-02/hathor.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/minimal-02/hathor.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/minimal-02/hathor.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-02/horus.svg" aria-label="Открыть SVG: Гор"><img src="assets/svg/pantheon/pantheon-svg-batch-2/minimal-02/horus.svg" loading="lazy" decoding="async" alt="Гор — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Гор</h3><span class="format">SVG</span></div>
+        <div class="role">MINIMAL 02</div>
+        <div class="file"><code>pantheon-svg-batch-2/minimal-02/horus.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-02/horus.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/minimal-02/horus.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/minimal-02/horus.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/minimal-02/horus.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-02/isis.svg" aria-label="Открыть SVG: Исида"><img src="assets/svg/pantheon/pantheon-svg-batch-2/minimal-02/isis.svg" loading="lazy" decoding="async" alt="Исида — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Исида</h3><span class="format">SVG</span></div>
+        <div class="role">MINIMAL 02</div>
+        <div class="file"><code>pantheon-svg-batch-2/minimal-02/isis.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-02/isis.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/minimal-02/isis.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/minimal-02/isis.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/minimal-02/isis.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-02/maat.svg" aria-label="Открыть SVG: Маат"><img src="assets/svg/pantheon/pantheon-svg-batch-2/minimal-02/maat.svg" loading="lazy" decoding="async" alt="Маат — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Маат</h3><span class="format">SVG</span></div>
+        <div class="role">MINIMAL 02</div>
+        <div class="file"><code>pantheon-svg-batch-2/minimal-02/maat.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-02/maat.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/minimal-02/maat.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/minimal-02/maat.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/minimal-02/maat.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-02/osiris.svg" aria-label="Открыть SVG: Осирис"><img src="assets/svg/pantheon/pantheon-svg-batch-2/minimal-02/osiris.svg" loading="lazy" decoding="async" alt="Осирис — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Осирис</h3><span class="format">SVG</span></div>
+        <div class="role">MINIMAL 02</div>
+        <div class="file"><code>pantheon-svg-batch-2/minimal-02/osiris.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-02/osiris.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/minimal-02/osiris.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/minimal-02/osiris.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/minimal-02/osiris.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-02/ra.svg" aria-label="Открыть SVG: Ра"><img src="assets/svg/pantheon/pantheon-svg-batch-2/minimal-02/ra.svg" loading="lazy" decoding="async" alt="Ра — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Ра</h3><span class="format">SVG</span></div>
+        <div class="role">MINIMAL 02</div>
+        <div class="file"><code>pantheon-svg-batch-2/minimal-02/ra.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-02/ra.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/minimal-02/ra.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/minimal-02/ra.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/minimal-02/ra.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-02/sekhmet.svg" aria-label="Открыть SVG: Сехмет"><img src="assets/svg/pantheon/pantheon-svg-batch-2/minimal-02/sekhmet.svg" loading="lazy" decoding="async" alt="Сехмет — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Сехмет</h3><span class="format">SVG</span></div>
+        <div class="role">MINIMAL 02</div>
+        <div class="file"><code>pantheon-svg-batch-2/minimal-02/sekhmet.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-02/sekhmet.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/minimal-02/sekhmet.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/minimal-02/sekhmet.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/minimal-02/sekhmet.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-02/set.svg" aria-label="Открыть SVG: Сет"><img src="assets/svg/pantheon/pantheon-svg-batch-2/minimal-02/set.svg" loading="lazy" decoding="async" alt="Сет — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Сет</h3><span class="format">SVG</span></div>
+        <div class="role">MINIMAL 02</div>
+        <div class="file"><code>pantheon-svg-batch-2/minimal-02/set.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-02/set.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/minimal-02/set.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/minimal-02/set.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/minimal-02/set.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-02/thoth.svg" aria-label="Открыть SVG: Тот"><img src="assets/svg/pantheon/pantheon-svg-batch-2/minimal-02/thoth.svg" loading="lazy" decoding="async" alt="Тот — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Тот</h3><span class="format">SVG</span></div>
+        <div class="role">MINIMAL 02</div>
+        <div class="file"><code>pantheon-svg-batch-2/minimal-02/thoth.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-02/thoth.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/minimal-02/thoth.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/minimal-02/thoth.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/minimal-02/thoth.webp" download>WEBP</a></span></div>
+      </article>
+        </div>
+      </div>
+    </section>
+    <section class="collection" id="pantheon-svg-batch-2-minimal-03">
+      <div class="wrap">
+        <div class="section-head"><div class="num">10 / 012</div><div><h2>Minimal 03</h2><p>12 образов · исходные имена сохранены</p></div></div>
+        <div class="grid">
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-03/amun.svg" aria-label="Открыть SVG: Амун"><img src="assets/svg/pantheon/pantheon-svg-batch-2/minimal-03/amun.svg" loading="lazy" decoding="async" alt="Амун — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Амун</h3><span class="format">SVG</span></div>
+        <div class="role">MINIMAL 03</div>
+        <div class="file"><code>pantheon-svg-batch-2/minimal-03/amun.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-03/amun.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/minimal-03/amun.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/minimal-03/amun.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/minimal-03/amun.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-03/anubis.svg" aria-label="Открыть SVG: Анубис"><img src="assets/svg/pantheon/pantheon-svg-batch-2/minimal-03/anubis.svg" loading="lazy" decoding="async" alt="Анубис — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Анубис</h3><span class="format">SVG</span></div>
+        <div class="role">MINIMAL 03</div>
+        <div class="file"><code>pantheon-svg-batch-2/minimal-03/anubis.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-03/anubis.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/minimal-03/anubis.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/minimal-03/anubis.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/minimal-03/anubis.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-03/bastet.svg" aria-label="Открыть SVG: Бастет"><img src="assets/svg/pantheon/pantheon-svg-batch-2/minimal-03/bastet.svg" loading="lazy" decoding="async" alt="Бастет — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Бастет</h3><span class="format">SVG</span></div>
+        <div class="role">MINIMAL 03</div>
+        <div class="file"><code>pantheon-svg-batch-2/minimal-03/bastet.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-03/bastet.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/minimal-03/bastet.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/minimal-03/bastet.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/minimal-03/bastet.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-03/hathor.svg" aria-label="Открыть SVG: Хатхор"><img src="assets/svg/pantheon/pantheon-svg-batch-2/minimal-03/hathor.svg" loading="lazy" decoding="async" alt="Хатхор — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Хатхор</h3><span class="format">SVG</span></div>
+        <div class="role">MINIMAL 03</div>
+        <div class="file"><code>pantheon-svg-batch-2/minimal-03/hathor.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-03/hathor.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/minimal-03/hathor.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/minimal-03/hathor.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/minimal-03/hathor.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-03/horus.svg" aria-label="Открыть SVG: Гор"><img src="assets/svg/pantheon/pantheon-svg-batch-2/minimal-03/horus.svg" loading="lazy" decoding="async" alt="Гор — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Гор</h3><span class="format">SVG</span></div>
+        <div class="role">MINIMAL 03</div>
+        <div class="file"><code>pantheon-svg-batch-2/minimal-03/horus.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-03/horus.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/minimal-03/horus.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/minimal-03/horus.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/minimal-03/horus.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-03/isis.svg" aria-label="Открыть SVG: Исида"><img src="assets/svg/pantheon/pantheon-svg-batch-2/minimal-03/isis.svg" loading="lazy" decoding="async" alt="Исида — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Исида</h3><span class="format">SVG</span></div>
+        <div class="role">MINIMAL 03</div>
+        <div class="file"><code>pantheon-svg-batch-2/minimal-03/isis.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-03/isis.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/minimal-03/isis.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/minimal-03/isis.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/minimal-03/isis.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-03/maat.svg" aria-label="Открыть SVG: Маат"><img src="assets/svg/pantheon/pantheon-svg-batch-2/minimal-03/maat.svg" loading="lazy" decoding="async" alt="Маат — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Маат</h3><span class="format">SVG</span></div>
+        <div class="role">MINIMAL 03</div>
+        <div class="file"><code>pantheon-svg-batch-2/minimal-03/maat.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-03/maat.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/minimal-03/maat.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/minimal-03/maat.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/minimal-03/maat.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-03/osiris.svg" aria-label="Открыть SVG: Осирис"><img src="assets/svg/pantheon/pantheon-svg-batch-2/minimal-03/osiris.svg" loading="lazy" decoding="async" alt="Осирис — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Осирис</h3><span class="format">SVG</span></div>
+        <div class="role">MINIMAL 03</div>
+        <div class="file"><code>pantheon-svg-batch-2/minimal-03/osiris.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-03/osiris.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/minimal-03/osiris.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/minimal-03/osiris.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/minimal-03/osiris.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-03/ra.svg" aria-label="Открыть SVG: Ра"><img src="assets/svg/pantheon/pantheon-svg-batch-2/minimal-03/ra.svg" loading="lazy" decoding="async" alt="Ра — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Ра</h3><span class="format">SVG</span></div>
+        <div class="role">MINIMAL 03</div>
+        <div class="file"><code>pantheon-svg-batch-2/minimal-03/ra.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-03/ra.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/minimal-03/ra.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/minimal-03/ra.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/minimal-03/ra.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-03/sekhmet.svg" aria-label="Открыть SVG: Сехмет"><img src="assets/svg/pantheon/pantheon-svg-batch-2/minimal-03/sekhmet.svg" loading="lazy" decoding="async" alt="Сехмет — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Сехмет</h3><span class="format">SVG</span></div>
+        <div class="role">MINIMAL 03</div>
+        <div class="file"><code>pantheon-svg-batch-2/minimal-03/sekhmet.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-03/sekhmet.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/minimal-03/sekhmet.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/minimal-03/sekhmet.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/minimal-03/sekhmet.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-03/set.svg" aria-label="Открыть SVG: Сет"><img src="assets/svg/pantheon/pantheon-svg-batch-2/minimal-03/set.svg" loading="lazy" decoding="async" alt="Сет — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Сет</h3><span class="format">SVG</span></div>
+        <div class="role">MINIMAL 03</div>
+        <div class="file"><code>pantheon-svg-batch-2/minimal-03/set.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-03/set.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/minimal-03/set.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/minimal-03/set.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/minimal-03/set.webp" download>WEBP</a></span></div>
+      </article>
+      <article class="card">
+        <a class="stage" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-03/thoth.svg" aria-label="Открыть SVG: Тот"><img src="assets/svg/pantheon/pantheon-svg-batch-2/minimal-03/thoth.svg" loading="lazy" decoding="async" alt="Тот — подготовленный SVG из пула Пантеона"></a>
+        <div class="card-head"><h3>Тот</h3><span class="format">SVG</span></div>
+        <div class="role">MINIMAL 03</div>
+        <div class="file"><code>pantheon-svg-batch-2/minimal-03/thoth.svg</code><span class="actions"><a class="btn" href="assets/svg/pantheon/pantheon-svg-batch-2/minimal-03/thoth.svg" download>SVG</a><a class="btn" href="exports/png/pantheon/pantheon-svg-batch-2/minimal-03/thoth.png" download>PNG</a><a class="btn" href="exports/jpg/pantheon/pantheon-svg-batch-2/minimal-03/thoth.jpg" download>JPG</a><a class="btn" href="exports/webp/pantheon/pantheon-svg-batch-2/minimal-03/thoth.webp" download>WEBP</a></span></div>
+      </article>
+        </div>
+      </div>
+    </section>
+    <section class="provenance" id="source"><div class="wrap"><div class="section-head"><div class="num">SOURCE</div><div><h2>Источник и целостность</h2><p>Опубликованный пул полностью соответствует скачанному набору.</p></div></div><dl class="specs"><div class="spec"><dt>Источник</dt><dd>Google Drive · папка «ПАНТЕОН» · ID <code>1EDzc6O5Hoxfymjmn9axY5zs9vJ9nJRVg</code></dd></div><div class="spec"><dt>Состав</dt><dd>120 SVG-файлов, 1 787 320 байт, 10 каталогов коллекций.</dd></div><div class="spec"><dt>Целостность</dt><dd>Исходные имена, каталоги и байты SVG сохранены. Контрольные суммы записаны в <code>assets/svg/pantheon/manifest.csv</code>.</dd></div><div class="spec"><dt>Веб-форматы</dt><dd>Для каждого SVG подготовлены PNG, JPG и lossless WebP с сохранением структуры каталогов.</dd></div><div class="spec"><dt>Основной знак</dt><dd>Коллекция не изменяет утверждённый логотип Гора и его эталонный SVG.</dd></div></dl><div class="note"><strong>Важно:</strong> ранее самостоятельно созданные варианты удалены из активов, экспортов, страницы и сборочного процесса. На этой странице показаны только файлы из подготовленного пула владельца.</div></div></section>
   </main>
-  <footer><div class="wrap footer"><span>MOKO AI Pantheon · Redesign 02 · 11 SVG-портретов · 2026-10-27</span><span><a href="index.html">Вернуться в брендбук</a></span></div></footer>
+  <footer><div class="wrap footer"><span>MOKO AI Pantheon · 120 owner-provided SVG assets · 2026-10-27</span><span><a href="index.html">Вернуться в брендбук</a></span></div></footer>
 </body>
 </html>

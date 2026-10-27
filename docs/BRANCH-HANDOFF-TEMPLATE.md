@@ -21,7 +21,7 @@
 ## Проверки
 
 - [ ] SVG открываются автономно
-- [ ] Pantheon обновлён через `scripts/build_pantheon.py`, если затронута серия
+- [ ] Pantheon проверен через `assets/svg/pantheon/verify_snapshot.py` и галерея обновлена через `scripts/build_pantheon_gallery.py`
 - [ ] PNG, JPG и WebP обновлены через `scripts/export_rasters.py`
 - [ ] круглая/квадратная обрезка проверена
 - [ ] 24 / 40 / 64 / 128 px проверены, если это иконка

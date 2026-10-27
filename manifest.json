@@ -1,6 +1,6 @@
 {
   "name": "moko-ai-brandbook",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "updated": "2026-10-27",
   "sourceOfTruth": "SVG",
   "brandbook": "BRANDBOOK.md",
@@ -150,108 +150,31 @@
       "statusColor": "#4a7fb5"
     },
     {
-      "id": "moko-ai-sekhmet",
-      "path": "assets/svg/pantheon/moko-ai-sekhmet.svg",
-      "kind": "pantheon-portrait",
-      "deity": "Сехмет",
-      "view": "front",
-      "facets": 28,
-      "primaryBrandMark": false
+      "id": "pantheon-owner-pool",
+      "path": "assets/svg/pantheon",
+      "kind": "asset-library",
+      "source": "Google Drive folder ПАНТЕОН",
+      "sourceFolderId": "1EDzc6O5Hoxfymjmn9axY5zs9vJ9nJRVg",
+      "svgCount": 120,
+      "byteCount": 1787320,
+      "ownerProvided": true,
+      "artworkModified": false
     },
     {
-      "id": "moko-ai-thoth",
-      "path": "assets/svg/pantheon/moko-ai-thoth.svg",
-      "kind": "pantheon-portrait",
-      "deity": "Тот",
-      "view": "profile-right",
-      "facets": 24,
-      "primaryBrandMark": false
+      "id": "pantheon-drive-manifest",
+      "path": "assets/svg/pantheon/manifest.csv",
+      "kind": "checksum-manifest",
+      "entries": 120
     },
     {
-      "id": "moko-ai-anubis",
-      "path": "assets/svg/pantheon/moko-ai-anubis.svg",
-      "kind": "pantheon-portrait",
-      "deity": "Анубис",
-      "view": "front",
-      "facets": 30,
-      "primaryBrandMark": false
+      "id": "pantheon-gallery-builder",
+      "path": "scripts/build_pantheon_gallery.py",
+      "kind": "page-generator"
     },
     {
-      "id": "moko-ai-bastet",
-      "path": "assets/svg/pantheon/moko-ai-bastet.svg",
-      "kind": "pantheon-portrait",
-      "deity": "Бастет",
-      "view": "profile-right",
-      "facets": 27,
-      "primaryBrandMark": false
-    },
-    {
-      "id": "moko-ai-ra",
-      "path": "assets/svg/pantheon/moko-ai-ra.svg",
-      "kind": "pantheon-portrait",
-      "deity": "Ра",
-      "view": "profile-right",
-      "facets": 26,
-      "primaryBrandMark": false
-    },
-    {
-      "id": "moko-ai-osiris",
-      "path": "assets/svg/pantheon/moko-ai-osiris.svg",
-      "kind": "pantheon-portrait",
-      "deity": "Осирис",
-      "view": "front",
-      "facets": 24,
-      "primaryBrandMark": false
-    },
-    {
-      "id": "moko-ai-set",
-      "path": "assets/svg/pantheon/moko-ai-set.svg",
-      "kind": "pantheon-portrait",
-      "deity": "Сет",
-      "view": "profile-right",
-      "facets": 26,
-      "primaryBrandMark": false
-    },
-    {
-      "id": "moko-ai-hathor",
-      "path": "assets/svg/pantheon/moko-ai-hathor.svg",
-      "kind": "pantheon-portrait",
-      "deity": "Хатхор",
-      "view": "front",
-      "facets": 24,
-      "primaryBrandMark": false
-    },
-    {
-      "id": "moko-ai-maat",
-      "path": "assets/svg/pantheon/moko-ai-maat.svg",
-      "kind": "pantheon-portrait",
-      "deity": "Маат",
-      "view": "profile-right",
-      "facets": 24,
-      "primaryBrandMark": false
-    },
-    {
-      "id": "moko-ai-amun",
-      "path": "assets/svg/pantheon/moko-ai-amun.svg",
-      "kind": "pantheon-portrait",
-      "deity": "Амун",
-      "view": "front",
-      "facets": 28,
-      "primaryBrandMark": false
-    },
-    {
-      "id": "moko-ai-aset",
-      "path": "assets/svg/pantheon/moko-ai-aset.svg",
-      "kind": "pantheon-portrait",
-      "deity": "Исида / Асет",
-      "view": "profile-right",
-      "facets": 24,
-      "primaryBrandMark": false
-    },
-    {
-      "id": "pantheon-generator",
-      "path": "scripts/build_pantheon.py",
-      "kind": "generator"
+      "id": "pantheon-snapshot-verifier",
+      "path": "assets/svg/pantheon/verify_snapshot.py",
+      "kind": "validator"
     },
     {
       "id": "horus-lowpoly-generator",
@@ -273,20 +196,25 @@
   ],
   "pantheon": {
     "page": "pantheon.html",
-    "generator": "scripts/build_pantheon.py",
+    "pageGenerator": "scripts/build_pantheon_gallery.py",
+    "assetRoot": "assets/svg/pantheon",
+    "checksumManifest": "assets/svg/pantheon/manifest.csv",
     "sourceOfTruth": "SVG",
-    "portraitCount": 11,
-    "views": [
-      "front",
-      "profile-right"
+    "source": "Google Drive folder ПАНТЕОН",
+    "sourceFolderId": "1EDzc6O5Hoxfymjmn9axY5zs9vJ9nJRVg",
+    "svgCount": 120,
+    "collectionCount": 10,
+    "byteCount": 1787320,
+    "downloadFormats": [
+      "svg",
+      "png",
+      "jpg",
+      "webp"
     ],
-    "facetsRange": [
-      22,
-      30
-    ],
-    "blackCircularField": true,
-    "outsideTransparency": true,
+    "originalNamesPreserved": true,
+    "originalHierarchyPreserved": true,
+    "artworkModified": false,
     "replacesApprovedHorus": false,
-    "referencePolicy": "visual-direction-only-no-tracing"
+    "referencePolicy": "exact-owner-pool-no-redrawing"
   }
 }
